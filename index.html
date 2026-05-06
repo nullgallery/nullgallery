@@ -40,9 +40,26 @@
     </div>
 
     <section class="hero" id="hero">
-        <div class="hero-bg-wrap">
-            <div class="hero-bg" style="background-image: url('images/hero.jpg');"></div>
+        <div class="hero-slideshow">
+            <!-- 슬라이드 1: 드론 영상 -->
+            <video
+                id="hero-video"
+                class="hero-slide hero-slide--video active"
+                src="images/hero_main_drone.mp4"
+                autoplay
+                muted
+                playsinline
+                preload="auto"
+            ></video>
+            <!-- 슬라이드 2: 정지 이미지 -->
+            <img
+                id="hero-img"
+                class="hero-slide hero-slide--img"
+                src="images/hero_main2.png"
+                alt="NULL GALLERY"
+            >
         </div>
+        <div class="hero-overlay"></div>
         <div class="hero-content">
             <p class="hero-label">현재 전시</p>
             <h1 class="hero-title">VOID<br><em>&amp; MATTER</em></h1>
@@ -54,6 +71,7 @@
             <div class="scroll-line"></div>
         </div>
     </section>
+
 
     <section class="about-strip">
         <div class="about-strip-inner">
