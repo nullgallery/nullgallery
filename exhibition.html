@@ -3,196 +3,126 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>?꾩떆 | NULL GALLERY</title>
-    <meta name="description" content="?먭갇?щ━ ?꾩옱쨌?덉젙쨌怨쇨굅 ?꾩떆 紐⑸줉. 諛???꾨?誘몄닠媛ㅻ윭由ъ뿉???대━??援?궡???꾨?誘몄닠 ?꾩떆.">
+    <title>전시 | NULL GALLERY</title>
+    <meta name="description" content="널갤러리 현재·예정·과거 전시 목록.">
     <link rel="stylesheet" href="style.css">
     <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Noto+Sans+KR:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 </head>
 <body class="page-inner">
-
     <header class="header header--dark" id="header">
-        <div class="header-logo">
-            <a href="index.html">NULL</a>
-        </div>
+        <div class="header-logo"><a href="index.html">NULL</a></div>
         <nav class="header-nav">
             <ul>
-                <li><a href="exhibition.html" class="active">?꾩떆</a></li>
-                <li><a href="visit.html">諛⑸Ц?덈궡</a></li>
+                <li><a href="exhibition.html" class="active">전시</a></li>
+                <li><a href="visit.html">방문안내</a></li>
             </ul>
         </nav>
         <div class="header-util">
             <span>KOR</span>
-            <button class="menu-btn" id="menuBtn" aria-label="硫붾돱 ?닿린">
-                <span></span><span></span>
-            </button>
+            <button class="menu-btn" id="menuBtn" aria-label="메뉴 열기"><span></span><span></span></button>
         </div>
     </header>
 
     <div class="menu-overlay" id="menuOverlay">
-        <button class="menu-close" id="menuClose">??/button>
+        <button class="menu-close" id="menuClose">✕</button>
         <nav class="overlay-nav">
             <ul>
-                <li><a href="exhibition.html" class="overlay-link">?꾩떆 <span>Exhibition</span></a></li>
-                <li><a href="visit.html" class="overlay-link">諛⑸Ц?덈궡 <span>Visit</span></a></li>
-                <li><a href="mailto:nullgallery2026@gmail.com" class="overlay-link">臾몄쓽 <span>Contact</span></a></li>
+                <li><a href="exhibition.html" class="overlay-link">전시 <span>Exhibition</span></a></li>
+                <li><a href="visit.html" class="overlay-link">방문안내 <span>Visit</span></a></li>
+                <li><a href="mailto:nullgallery2026@gmail.com" class="overlay-link">문의 <span>Contact</span></a></li>
             </ul>
         </nav>
         <div class="overlay-info">
             <p>nullgallery2026@gmail.com</p>
-            <p>寃쎌긽?⑤룄 諛?묒떆 援먮룞 692-2</p>
+            <p>경상남도 밀양시 교동 692-2</p>
         </div>
     </div>
 
-    <!-- ?? PAGE HERO ??????????????????????????????????????? -->
     <div class="page-hero">
         <div class="page-hero-inner">
-            <h1>?꾩떆 <em>Exhibition</em></h1>
+            <h1>전시 <em>Exhibition</em></h1>
         </div>
     </div>
 
-    <!-- ?? FILTER TABS ????????????????????????????????????? -->
     <div class="filter-tabs">
-        <button class="tab active" data-filter="all">?꾩껜</button>
-        <button class="tab" data-filter="current">?꾩옱?꾩떆</button>
-        <button class="tab" data-filter="upcoming">?덉젙?꾩떆</button>
-        <button class="tab" data-filter="past">怨쇨굅?꾩떆</button>
+        <button class="tab active" data-filter="all">전체</button>
+        <button class="tab" data-filter="current">현재전시</button>
+        <button class="tab" data-filter="upcoming">예정전시</button>
+        <button class="tab" data-filter="past">과거전시</button>
     </div>
 
-    <!-- ?? EXHIBITION LIST ????????????????????????????????? -->
     <main class="ex-list">
-
-        <!-- CURRENT 1 -->
         <article class="ex-item" data-category="current">
             <a href="#" class="ex-item-inner">
                 <div class="ex-img-wrap">
                     <div class="ex-img" style="background-image:url('images/ex_void.jpg');"></div>
-                    <div class="ex-badge current">?꾩옱?꾩떆</div>
+                    <div class="ex-badge current">현재전시</div>
                 </div>
                 <div class="ex-meta">
                     <div class="ex-meta-left">
                         <h2>VOID &amp; MATTER</h2>
-                        <p class="ex-artist">洹몃９??/p>
-                        <p class="ex-period">2026.04.01 ??2026.07.31</p>
+                        <p class="ex-artist">그룹전</p>
+                        <p class="ex-period">2026.04.01 — 2026.07.31</p>
                     </div>
-                    <div class="ex-meta-right">
-                        <span class="ex-arrow">??/span>
-                    </div>
+                    <div class="ex-meta-right"><span class="ex-arrow">→</span></div>
                 </div>
             </a>
         </article>
-
         <div class="ex-divider"></div>
 
-        <!-- CURRENT 2 -->
         <article class="ex-item" data-category="current">
             <a href="#" class="ex-item-inner">
                 <div class="ex-img-wrap">
                     <div class="ex-img" style="background-image:url('images/ex_black.jpg');"></div>
-                    <div class="ex-badge current">?꾩옱?꾩떆</div>
+                    <div class="ex-badge current">현재전시</div>
                 </div>
                 <div class="ex-meta">
                     <div class="ex-meta-left">
                         <h2>BLACK FIELD</h2>
-                        <p class="ex-artist">?댄쁽??媛쒖씤??/p>
-                        <p class="ex-period">2026.03.15 ??2026.06.30</p>
+                        <p class="ex-artist">이현우 개인전</p>
+                        <p class="ex-period">2026.03.15 — 2026.06.30</p>
                     </div>
-                    <div class="ex-meta-right">
-                        <span class="ex-arrow">??/span>
-                    </div>
+                    <div class="ex-meta-right"><span class="ex-arrow">→</span></div>
                 </div>
             </a>
         </article>
-
         <div class="ex-divider"></div>
 
-        <!-- UPCOMING -->
-        <article class="ex-item" data-category="upcoming">
-            <a href="#" class="ex-item-inner">
-                <div class="ex-img-wrap">
-                    <div class="ex-img" style="background-image:url('images/ex_echo.jpg');"></div>
-                    <div class="ex-badge upcoming">?덉젙?꾩떆</div>
-                </div>
-                <div class="ex-meta">
-                    <div class="ex-meta-left">
-                        <h2>ECHO CHAMBER</h2>
-                        <p class="ex-artist">諛뺤꽌??횞 理쒕떎?</p>
-                        <p class="ex-period">2026.08.15 ??2026.11.30</p>
-                    </div>
-                    <div class="ex-meta-right">
-                        <span class="ex-arrow">??/span>
-                    </div>
-                </div>
-            </a>
-        </article>
-
-        <div class="ex-divider"></div>
-
-        <!-- UPCOMING 2 -->
         <article class="ex-item" data-category="upcoming">
             <a href="#" class="ex-item-inner">
                 <div class="ex-img-wrap">
                     <div class="ex-img" style="background-image:url('images/ex_fashion.jpg');"></div>
-                    <div class="ex-badge upcoming">?덉젙?꾩떆</div>
+                    <div class="ex-badge upcoming">예정전시</div>
                 </div>
                 <div class="ex-meta">
                     <div class="ex-meta-left">
-                        <h2>?띿씡??숆탳 ?⑥뀡?꾪겕 2026</h2>
+                        <h2>홍익대학교 패션위크 2026</h2>
                         <p class="ex-artist">Hongik University Fashion Week</p>
-                        <p class="ex-period">2026.09.01 ??2026.09.03</p>
+                        <p class="ex-period">2026.09.01 — 2026.09.03</p>
                     </div>
-                    <div class="ex-meta-right">
-                        <span class="ex-arrow">??/span>
-                    </div>
+                    <div class="ex-meta-right"><span class="ex-arrow">→</span></div>
                 </div>
             </a>
         </article>
-
         <div class="ex-divider"></div>
 
-        <!-- PAST 1 -->
-        <article class="ex-item" data-category="past">
-            <a href="#" class="ex-item-inner">
-                <div class="ex-img-wrap">
-                    <div class="ex-img" style="background-image:url('images/ex_trace.jpg');"></div>
-                    <div class="ex-badge past">怨쇨굅?꾩떆</div>
-                </div>
-                <div class="ex-meta">
-                    <div class="ex-meta-left">
-                        <h2>TRACE OF FIRE</h2>
-                        <p class="ex-artist">源?꾪쁽 媛쒖씤??/p>
-                        <p class="ex-period">2025.10.01 ??2026.01.31</p>
-                    </div>
-                    <div class="ex-meta-right">
-                        <span class="ex-arrow">??/span>
-                    </div>
-                </div>
-            </a>
-        </article>
-
-        <div class="ex-divider"></div>
-
-        <!-- PAST 2 -->
         <article class="ex-item" data-category="past">
             <a href="#" class="ex-item-inner">
                 <div class="ex-img-wrap">
                     <div class="ex-img" style="background-image:url('images/ex_ruin.jpg');"></div>
-                    <div class="ex-badge past">怨쇨굅?꾩떆</div>
+                    <div class="ex-badge past">과거전시</div>
                 </div>
                 <div class="ex-meta">
                     <div class="ex-meta-left">
                         <h2>RUIN &amp; REVIVAL</h2>
-                        <p class="ex-artist">洹몃９?????곗뾽?좎궛怨??덉닠</p>
-                        <p class="ex-period">2025.05.01 ??2025.08.31</p>
+                        <p class="ex-artist">그룹전 — 산업유산과 예술</p>
+                        <p class="ex-period">2025.05.01 — 2025.08.31</p>
                     </div>
-                    <div class="ex-meta-right">
-                        <span class="ex-arrow">??/span>
-                    </div>
+                    <div class="ex-meta-right"><span class="ex-arrow">→</span></div>
                 </div>
             </a>
         </article>
-
         <div class="ex-divider"></div>
-
     </main>
 
     <footer class="footer">
@@ -200,25 +130,24 @@
             <div class="footer-brand">NULL GALLERY</div>
             <div class="footer-cols">
                 <div class="footer-col">
-                    <p class="footer-col-title">二쇱냼</p>
-                    <p>寃쎌긽?⑤룄 諛?묒떆 援먮룞 692-2</p>
+                    <p class="footer-col-title">주소</p>
+                    <p>경상남도 밀양시 교동 692-2</p>
                 </div>
                 <div class="footer-col">
-                    <p class="footer-col-title">?댁쁺?쒓컙</p>
-                    <p>?????? 10:00 ??18:00</p>
-                    <p class="footer-muted">?붿슂???닿?</p>
+                    <p class="footer-col-title">운영시간</p>
+                    <p>화 – 일  10:00 – 18:00</p>
+                    <p class="footer-muted">월요일 휴관</p>
                 </div>
                 <div class="footer-col">
-                    <p class="footer-col-title">臾몄쓽</p>
+                    <p class="footer-col-title">문의</p>
                     <p><a href="mailto:nullgallery2026@gmail.com">nullgallery2026@gmail.com</a></p>
                 </div>
             </div>
             <div class="footer-bottom">
-                <p>짤 2026 NULL GALLERY. All Rights Reserved.</p>
+                <p>© 2026 NULL GALLERY. All Rights Reserved.</p>
             </div>
         </div>
     </footer>
-
     <script src="script.js"></script>
 </body>
 </html>
