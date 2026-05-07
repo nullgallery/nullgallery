@@ -97,9 +97,10 @@ document.addEventListener('DOMContentLoaded', () => {
 
     // ── 전시 데이터 로드 (CSV) ──────────────────────────
     const exContainer = document.getElementById('exhibition-container');
+    const indexGrid = document.getElementById('index-ex-grid');
     const tabs = document.querySelectorAll('.tab');
 
-    if (exContainer) { loadExhibitions(); }
+    if (exContainer || indexGrid) { loadExhibitions(); }
 
     async function loadExhibitions() {
         try {
