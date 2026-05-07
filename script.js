@@ -107,20 +107,46 @@ document.addEventListener('DOMContentLoaded', () => {
             const data = await response.text();
             const rows = data.split('\n').slice(1).filter(row => row.trim() !== '');
             const exhibitions = rows.map(row => {
-                const cols = row.split(',');
+                const cols = row.split(/,(?=(?:(?:[^"]*"){2})*[^"]*$)/);
                 return { 
                     id: cols[0], 
-                    title: cols[1], 
-                    artist: cols[2], 
-                    period: cols[3], 
-                    category: cols[4], 
-                    folder: cols[5], 
-                    thumbnail: cols[6],
-                    url: cols[7] || '#'
+                    title: cols[1].replace(/"/g, ''), 
+                    artist: cols[2].replace(/"/g, ''), 
+                    period: cols[3].replace(/"/g, ''), 
+                    category: cols[4].replace(/"/g, ''), 
+                    folder: cols[5].replace(/"/g, ''), 
+                    thumbnail: cols[6].replace(/"/g, ''),
+                    url: cols[7] ? cols[7].replace(/"/g, '').trim() : '#'
                 };
             });
-            renderExhibitions(exhibitions);
-            setupFilters();
+
+            // Exhibition Page Rendering
+            if (exContainer) {
+                renderExhibitions(exhibitions);
+                setupFilters();
+            }
+
+            // Landing Page Rendering
+            const indexGrid = document.getElementById('index-ex-grid');
+            if (indexGrid) {
+                indexGrid.innerHTML = '';
+                exhibitions.filter(ex => ex.category === 'current' || ex.category === 'upcoming').forEach(ex => {
+                    const cardHTML = `
+                        <a href="${ex.url === '#' ? 'exhibition.html' : ex.url}" class="exhibit-card">
+                            <div class="exhibit-img-wrap">
+                                <div class="exhibit-img" style="background-image:url('images/${ex.thumbnail}'); background-color:#1a1a1a;"></div>
+                            </div>
+                            <div class="exhibit-info">
+                                <p class="exhibit-label">${getCategoryLabel(ex.category)}</p>
+                                <h3>${ex.title}</h3>
+                                <p class="exhibit-period">${ex.period}</p>
+                                <p class="exhibit-venue">NULL GALLERY, 밀양</p>
+                            </div>
+                        </a>
+                    `;
+                    indexGrid.insertAdjacentHTML('beforeend', cardHTML);
+                });
+            }
         } catch (err) { console.error('Exhibition Load Error:', err); }
     }
 
@@ -137,7 +163,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 : `openGallery('${ex.title}', '${ex.artist}', '${ex.folder}', '${ex.thumbnail}')`;
 
             article.innerHTML = `
-                <a href="javascript:void(0)" class="ex-item-inner" onclick="${clickAction}">
+                <a href="${ex.url === '#' ? 'javascript:void(0)' : ex.url}" class="ex-item-inner" onclick="${ex.url === '#' ? clickAction : ''}">
                     <div class="ex-img-wrap">
                         <div class="ex-img" style="background-image:url('images/${ex.thumbnail}');"></div>
                         <div class="ex-badge ${ex.category}">${getCategoryLabel(ex.category)}</div>
