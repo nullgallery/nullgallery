@@ -52,79 +52,27 @@
         <button class="tab" data-filter="past">과거전시</button>
     </div>
 
-    <main class="ex-list">
-        <article class="ex-item" data-category="current">
-            <a href="#" class="ex-item-inner">
-                <div class="ex-img-wrap">
-                    <div class="ex-img" style="background-image:url('images/ex_void.jpg');"></div>
-                    <div class="ex-badge current">현재전시</div>
-                </div>
-                <div class="ex-meta">
-                    <div class="ex-meta-left">
-                        <h2>VOID &amp; MATTER</h2>
-                        <p class="ex-artist">그룹전</p>
-                        <p class="ex-period">2026.04.01 — 2026.07.31</p>
-                    </div>
-                    <div class="ex-meta-right"><span class="ex-arrow">→</span></div>
-                </div>
-            </a>
-        </article>
-        <div class="ex-divider"></div>
-
-        <article class="ex-item" data-category="current">
-            <a href="#" class="ex-item-inner">
-                <div class="ex-img-wrap">
-                    <div class="ex-img" style="background-image:url('images/ex_black.jpg');"></div>
-                    <div class="ex-badge current">현재전시</div>
-                </div>
-                <div class="ex-meta">
-                    <div class="ex-meta-left">
-                        <h2>BLACK FIELD</h2>
-                        <p class="ex-artist">이현우 개인전</p>
-                        <p class="ex-period">2026.03.15 — 2026.06.30</p>
-                    </div>
-                    <div class="ex-meta-right"><span class="ex-arrow">→</span></div>
-                </div>
-            </a>
-        </article>
-        <div class="ex-divider"></div>
-
-        <article class="ex-item" data-category="upcoming">
-            <a href="#" class="ex-item-inner">
-                <div class="ex-img-wrap">
-                    <div class="ex-img" style="background-image:url('images/ex_fashion.jpg');"></div>
-                    <div class="ex-badge upcoming">예정전시</div>
-                </div>
-                <div class="ex-meta">
-                    <div class="ex-meta-left">
-                        <h2>홍익대학교 패션위크 2026</h2>
-                        <p class="ex-artist">Hongik University Fashion Week</p>
-                        <p class="ex-period">2026.09.01 — 2026.09.03</p>
-                    </div>
-                    <div class="ex-meta-right"><span class="ex-arrow">→</span></div>
-                </div>
-            </a>
-        </article>
-        <div class="ex-divider"></div>
-
-        <article class="ex-item" data-category="past">
-            <a href="#" class="ex-item-inner">
-                <div class="ex-img-wrap">
-                    <div class="ex-img" style="background-image:url('images/ex_ruin.jpg');"></div>
-                    <div class="ex-badge past">과거전시</div>
-                </div>
-                <div class="ex-meta">
-                    <div class="ex-meta-left">
-                        <h2>RUIN &amp; REVIVAL</h2>
-                        <p class="ex-artist">그룹전 — 산업유산과 예술</p>
-                        <p class="ex-period">2025.05.01 — 2025.08.31</p>
-                    </div>
-                    <div class="ex-meta-right"><span class="ex-arrow">→</span></div>
-                </div>
-            </a>
-        </article>
-        <div class="ex-divider"></div>
+    <main class="ex-list" id="exhibition-container">
+        <!-- Dynamic content will be loaded here from exhibitions.csv -->
+        <p style="text-align:center; padding: 50px;">전시 목록을 불러오는 중...</p>
     </main>
+
+    <!-- Gallery Overlay / Lightbox -->
+    <div id="gallery-overlay" class="gallery-overlay">
+        <button class="gallery-close" id="galleryClose">✕</button>
+        <div class="gallery-content">
+            <div class="gallery-main-img-wrap">
+                <img id="gallery-main-img" src="" alt="Exhibition View">
+            </div>
+            <div class="gallery-thumbs" id="galleryThumbs">
+                <!-- Thumbnails will be loaded here -->
+            </div>
+            <div class="gallery-info">
+                <h3 id="galleryTitle"></h3>
+                <p id="galleryDesc"></p>
+            </div>
+        </div>
+    </div>
 
     <footer class="footer">
         <div class="footer-inner">
