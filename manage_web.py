@@ -32,7 +32,21 @@ def manage():
 
     print(f"\nTotal exhibitions managed: {len(exhibitions)}")
 
-    # 2. Git 자동 푸쉬 (옵션)
+    # 1.5. Hero 슬라이드쇼 파일 탐색 및 설정 생성
+    print("\n=== Scanning for Hero Media... ===")
+    hero_files = []
+    if os.path.exists(IMAGES_DIR):
+        all_files = os.listdir(IMAGES_DIR)
+        # hero_main으로 시작하는 이미지와 영상 찾기
+        hero_media = [f for f in all_files if f.startswith('hero_main') and (f.endswith('.png') or f.endswith('.jpg') or f.endswith('.mp4'))]
+        # 숫자로 정렬 (hero_main.mp4, hero_main2.png, hero_main3.png 등)
+        hero_media.sort()
+        hero_files = hero_media
+        print(f"Detected {len(hero_files)} hero files: {hero_files}")
+
+    with open("hero_config.js", "w", encoding='utf-8') as f:
+        f.write(f"const HERO_MEDIA = {hero_files};")
+    print("[OK] Generated hero_config.js")
     if GIT_PUSH_ON_SUCCESS:
         try:
             print("\n=== Git Syncing... ===")

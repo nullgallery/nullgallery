@@ -41,31 +41,66 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     });
 
-    // ── Hero 슬라이드쇼 (MP4 → PNG → MP4 → ... 무한루프) ──
-    const video = document.getElementById('hero-video');
-    const img   = document.getElementById('hero-img');
-    const IMG_DISPLAY_MS = 5000; // 이미지 표시 시간 (ms)
+    // ── Hero 슬라이드쇼 (HERO_MEDIA 기반 무한루프) ──────
+    const heroSlideshow = document.querySelector('.hero-slideshow');
+    const IMG_DISPLAY_MS = 5000;
 
-    if (video && img) {
-        // 영상이 끝나면 → 이미지로 크로스페이드
-        video.addEventListener('ended', () => {
-            video.classList.remove('active');
-            img.classList.add('active');
+    if (heroSlideshow && typeof HERO_MEDIA !== 'undefined' && HERO_MEDIA.length > 0) {
+        // 기존 하드코딩된 슬라이드 삭제
+        heroSlideshow.innerHTML = '';
+        
+        let currentIndex = 0;
+        const slides = [];
 
-            // 이미지 5초 후 → 영상으로 다시 크로스페이드 (루프)
-            setTimeout(() => {
-                img.classList.remove('active');
-                video.currentTime = 0;   // 영상 처음으로 되감기
-                video.play();
-                video.classList.add('active');
-            }, IMG_DISPLAY_MS);
+        // 슬라이드 요소 생성
+        HERO_MEDIA.forEach((file, idx) => {
+            let el;
+            if (file.endsWith('.mp4')) {
+                el = document.createElement('video');
+                el.src = `images/${file}`;
+                el.muted = true;
+                el.playsInline = true;
+                el.preload = 'auto';
+                el.className = 'hero-slide hero-slide--video';
+            } else {
+                el = document.createElement('img');
+                el.src = `images/${file}`;
+                el.className = 'hero-slide hero-slide--img';
+            }
+            if (idx === 0) el.classList.add('active');
+            heroSlideshow.appendChild(el);
+            slides.push(el);
         });
 
-        // 영상 로드 실패 시 이미지로 폴백
-        video.addEventListener('error', () => {
-            video.classList.remove('active');
-            img.classList.add('active');
-        });
+        function nextSlide() {
+            const currentSlide = slides[currentIndex];
+            currentIndex = (currentIndex + 1) % slides.length;
+            const nextSlide = slides[currentIndex];
+
+            currentSlide.classList.remove('active');
+            nextSlide.classList.add('active');
+
+            if (nextSlide.tagName === 'VIDEO') {
+                nextSlide.currentTime = 0;
+                nextSlide.play().catch(e => console.log("Video play blocked:", e));
+                nextSlide.onended = nextSlideLogic;
+            } else {
+                setTimeout(nextSlideLogic, IMG_DISPLAY_MS);
+            }
+        }
+
+        function nextSlideLogic() {
+            nextSlide();
+        }
+
+        // 첫 슬라이드가 영상이면 바로 실행
+        const first = slides[0];
+        if (first.tagName === 'VIDEO') {
+            first.play().catch(e => console.log("Video play blocked:", e));
+            first.onended = nextSlideLogic;
+        } else {
+            setTimeout(nextSlideLogic, IMG_DISPLAY_MS);
+        }
     }
 
     // ── 전시 데이터 로드 (CSV) ──────────────────────────
