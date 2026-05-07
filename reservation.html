@@ -282,10 +282,29 @@
                 }
             }
 
+            // 사용자 식별 (로컬 스토리지 활용)
+            function getUserId() {
+                let uid = localStorage.getItem('null_gallery_uid');
+                if (!uid) {
+                    uid = 'USER-' + Math.random().toString(36).substr(2, 9).toUpperCase();
+                    localStorage.setItem('null_gallery_uid', uid);
+                }
+                return uid;
+            }
+
+            // IP 주소 가져오기
+            let userIp = "Unknown";
+            fetch('https://api.ipify.org?format=json')
+                .then(r => r.json())
+                .then(data => userIp = data.ip)
+                .catch(e => console.log("IP fetch failed"));
+
             function logAction(action) {
                 const now = new Date();
                 const logData = {
                     timestamp: now.toLocaleString(),
+                    userId: getUserId(),
+                    ip: userIp,
                     action: action,
                     userAgent: navigator.userAgent
                 };
@@ -298,7 +317,7 @@
                 logs.push(logData);
                 localStorage.setItem('null_res_logs', JSON.stringify(logs));
 
-                // 3. 구글 시트로 실시간 전송 (배포 후 아래 URL 수정 필요)
+                // 3. 구글 시트로 실시간 전송
                 sendToGoogleSheet(logData);
             }
 
