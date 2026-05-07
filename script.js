@@ -108,7 +108,16 @@ document.addEventListener('DOMContentLoaded', () => {
             const rows = data.split('\n').slice(1).filter(row => row.trim() !== '');
             const exhibitions = rows.map(row => {
                 const cols = row.split(',');
-                return { id: cols[0], title: cols[1], artist: cols[2], period: cols[3], category: cols[4], folder: cols[5], thumbnail: cols[6] };
+                return { 
+                    id: cols[0], 
+                    title: cols[1], 
+                    artist: cols[2], 
+                    period: cols[3], 
+                    category: cols[4], 
+                    folder: cols[5], 
+                    thumbnail: cols[6],
+                    url: cols[7] || '#'
+                };
             });
             renderExhibitions(exhibitions);
             setupFilters();
@@ -121,8 +130,14 @@ document.addEventListener('DOMContentLoaded', () => {
             const article = document.createElement('article');
             article.className = 'ex-item fade-in';
             article.dataset.category = ex.category;
+            
+            const isExternal = ex.url !== '#';
+            const clickAction = isExternal 
+                ? `location.href='${ex.url}'` 
+                : `openGallery('${ex.title}', '${ex.artist}', '${ex.folder}', '${ex.thumbnail}')`;
+
             article.innerHTML = `
-                <a href="javascript:void(0)" class="ex-item-inner" onclick="openGallery('${ex.title}', '${ex.artist}', '${ex.folder}', '${ex.thumbnail}')">
+                <a href="javascript:void(0)" class="ex-item-inner" onclick="${clickAction}">
                     <div class="ex-img-wrap">
                         <div class="ex-img" style="background-image:url('images/${ex.thumbnail}');"></div>
                         <div class="ex-badge ${ex.category}">${getCategoryLabel(ex.category)}</div>
