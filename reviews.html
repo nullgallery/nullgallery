@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>방문후기 | NULL GALLERY</title>
+    <meta name="description" content="널갤러리(NULL GALLERY) 방문후기 — 관람객들이 전하는 생생한 전시 현장 이야기. 밀양 핫플, 전시 추천 후기.">
+    <meta name="keywords" content="널갤러리 후기, 밀양 전시 후기, 밀양 가볼만한곳 후기, 밀양 핫플 추천, 밀양 데이트 코스">
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Noto+Sans+KR:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body class="page-inner">
+    <header class="header header--dark" id="header">
+        <div class="header-logo"><a href="index.html">NULL</a></div>
+        <nav class="header-nav">
+            <ul>
+                <li><a href="exhibition.html">전시</a></li>
+                <li><a href="visit.html">방문안내</a></li>
+                <li><a href="reviews.html" class="active">방문후기</a></li>
+            </ul>
+        </nav>
+        <div class="header-util">
+            <span>KOR</span>
+            <button class="menu-btn" id="menuBtn" aria-label="메뉴 열기"><span></span><span></span></button>
+        </div>
+    </header>
+
+    <div class="menu-overlay" id="menuOverlay">
+        <button class="menu-close" id="menuClose">✕</button>
+        <nav class="overlay-nav">
+            <ul>
+                <li><a href="exhibition.html" class="overlay-link">전시 <span>Exhibition</span></a></li>
+                <li><a href="visit.html" class="overlay-link">방문안내 <span>Visit</span></a></li>
+                <li><a href="reviews.html" class="overlay-link">방문후기 <span>Reviews</span></a></li>
+                <li><a href="mailto:nullgallery2026@gmail.com" class="overlay-link">문의 <span>Contact</span></a></li>
+            </ul>
+        </nav>
+    </div>
+
+    <div class="page-hero">
+        <div class="page-hero-inner">
+            <h1>방문후기 <em>Reviews</em></h1>
+        </div>
+    </div>
+
+    <main class="reviews-main">
+        <div class="reviews-grid" id="reviews-container">
+            <!-- Dynamic content loaded from reviews.csv -->
+            <p style="text-align:center; padding: 100px; grid-column: 1/-1;">후기를 불러오는 중...</p>
+        </div>
+    </main>
+
+    <footer class="footer">
+        <div class="footer-inner">
+            <div class="footer-brand">NULL GALLERY</div>
+            <div class="footer-bottom">
+                <p>© 2026 NULL GALLERY. All Rights Reserved.</p>
+            </div>
+        </div>
+    </footer>
+    <script src="script.js"></script>
+</body>
+</html>

@@ -16,7 +16,13 @@ def manage():
         return
 
     # 1. CSV 읽기 및 폴더 생성
+    print("\n=== Managing Exhibition Folders ===")
     exhibitions = []
+    # 후기 폴더 보장
+    rev_dir = os.path.join(IMAGES_DIR, "reviews")
+    if not os.path.exists(rev_dir):
+        os.makedirs(rev_dir)
+        print(f"[NEW] Created folder: {rev_dir}")
     with open(CSV_PATH, mode='r', encoding='utf-8') as f:
         reader = csv.DictReader(f)
         for row in reader:
