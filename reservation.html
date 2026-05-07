@@ -173,18 +173,36 @@
 
             function logAction(action) {
                 const now = new Date();
-                const logEntry = {
+                const logData = {
                     timestamp: now.toLocaleString(),
                     action: action,
                     userAgent: navigator.userAgent
                 };
                 
-                // 시뮬레이션 로그 저장 (콘솔 출력 및 로컬 스토리지)
-                console.log("%c[RESERVATION LOG]", "color: #00ff00; font-weight: bold;", logEntry);
+                // 1. 브라우저 콘솔 기록
+                console.log("%c[RESERVATION LOG]", "color: #00ff00; font-weight: bold;", logData);
                 
+                // 2. 로컬 스토리지 기록
                 let logs = JSON.parse(localStorage.getItem('null_res_logs') || '[]');
-                logs.push(logEntry);
+                logs.push(logData);
                 localStorage.setItem('null_res_logs', JSON.stringify(logs));
+
+                // 3. 구글 시트로 실시간 전송 (배포 후 아래 URL 수정 필요)
+                sendToGoogleSheet(logData);
+            }
+
+            function sendToGoogleSheet(data) {
+                // 이 URL은 사용자가 구글 앱스 스크립트(Apps Script) 배포 후 생성된 URL로 교체해야 합니다.
+                const GOOGLE_SCRIPT_URL = "https://script.google.com/macros/s/AKfycby_PLACEHOLDER/exec";
+                
+                if (GOOGLE_SCRIPT_URL.includes("PLACEHOLDER")) return;
+
+                fetch(GOOGLE_SCRIPT_URL, {
+                    method: "POST",
+                    mode: "no-cors",
+                    headers: { "Content-Type": "application/json" },
+                    body: JSON.stringify(data)
+                }).catch(err => console.error("Cloud Log Error:", err));
             }
 
             reserveBtn.addEventListener('click', () => {
