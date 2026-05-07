@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>전시예약 | 밀양 널갤러리 NULL GALLERY</title>
+    <meta name="description" content="밀양 널갤러리(NULL GALLERY) 전시 예약 페이지. 현재 진행 중인 전시를 확인하고 편리하게 예약하세요.">
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Noto+Sans+KR:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        .res-container { max-width: 1200px; margin: 0 auto; padding: 100px 48px; display: grid; grid-template-columns: 1fr 1fr; gap: 80px; }
+        .res-select-area h2 { font-family: 'Bebas Neue', sans-serif; font-size: 36px; margin-bottom: 40px; }
+        .res-list { list-style: none; }
+        .res-item { padding: 30px; border: 1px solid #eee; margin-bottom: 20px; cursor: pointer; transition: 0.3s; }
+        .res-item:hover, .res-item.active { border-color: #000; background: #fafafa; }
+        .res-item h3 { font-size: 20px; margin-bottom: 10px; }
+        .res-item p { font-size: 14px; color: #666; }
+
+        .calendar-area { position: sticky; top: 120px; }
+        .calendar-header { display: flex; justify-content: space-between; align-items: center; margin-bottom: 20px; }
+        .calendar-grid { display: grid; grid-template-columns: repeat(7, 1fr); gap: 10px; text-align: center; }
+        .cal-day { padding: 15px 0; background: #f9f9f9; border-radius: 4px; font-size: 14px; cursor: pointer; }
+        .cal-day:hover { background: #eee; }
+        .cal-day.disabled { opacity: 0.2; cursor: not-allowed; }
+        .cal-day.selected { background: #000; color: #fff; }
+        .cal-weekday { font-weight: 700; padding-bottom: 10px; font-size: 12px; color: #999; }
+
+        .res-summary { margin-top: 40px; padding-top: 30px; border-top: 1px solid #eee; }
+        .res-price-info { display: flex; justify-content: space-between; margin-bottom: 10px; font-size: 15px; }
+        .res-btn { width: 100%; padding: 20px; background: #000; color: #fff; font-weight: 700; margin-top: 30px; transition: 0.3s; }
+        .res-btn:hover { background: #333; }
+
+        @media (max-width: 1024px) {
+            .res-container { grid-template-columns: 1fr; }
+            .calendar-area { position: static; }
+        }
+    </style>
+</head>
+<body class="page-inner">
+    <header class="header header--dark" id="header">
+        <div class="header-logo"><a href="index.html">NULL</a></div>
+        <nav class="header-nav">
+            <ul>
+                <li><a href="exhibition.html">전시</a></li>
+                <li><a href="visit.html">방문안내</a></li>
+                <li><a href="reviews.html">방문후기</a></li>
+                <li><a href="reservation.html" class="active">예약</a></li>
+            </ul>
+        </nav>
+        <div class="header-util">
+            <span>KOR</span>
+            <button class="menu-btn" id="menuBtn"><span></span><span></span></button>
+        </div>
+    </header>
+
+    <div class="menu-overlay" id="menuOverlay">
+        <button class="menu-close" id="menuClose">✕</button>
+        <nav class="overlay-nav">
+            <ul>
+                <li><a href="exhibition.html" class="overlay-link">전시 <span>Exhibition</span></a></li>
+                <li><a href="visit.html" class="overlay-link">방문안내 <span>Visit</span></a></li>
+                <li><a href="reviews.html" class="overlay-link">방문후기 <span>Reviews</span></a></li>
+                <li><a href="reservation.html" class="overlay-link">예약 <span>Reservation</span></a></li>
+            </ul>
+        </nav>
+    </div>
+
+    <div class="page-hero">
+        <div class="page-hero-inner">
+            <h1>전시예약 <em>Reservation</em></h1>
+        </div>
+    </div>
+
+    <main class="res-container">
+        <section class="res-select-area">
+            <h2>SELECT EXHIBITION</h2>
+            <ul class="res-list" id="res-exhibition-list">
+                <!-- Loaded from CSV -->
+            </ul>
+
+            <div class="res-summary">
+                <div class="res-price-info">
+                    <span>성인 일반</span>
+                    <span>10,000원</span>
+                </div>
+                <div class="res-price-info">
+                    <span>초/중/고 학생</span>
+                    <span>5,000원</span>
+                </div>
+                <p style="font-size: 12px; color: #888; margin-top: 20px;">* 시뮬레이션 예약 페이지입니다. 실제 결제는 이루어지지 않습니다.</p>
+            </div>
+        </section>
+
+        <section class="calendar-area">
+            <div class="calendar-header">
+                <h3 id="cal-month-year">2026.06</h3>
+            </div>
+            <div class="calendar-grid">
+                <div class="cal-weekday">SUN</div><div class="cal-weekday">MON</div><div class="cal-weekday">TUE</div><div class="cal-weekday">WED</div><div class="cal-weekday">THU</div><div class="cal-weekday">FRI</div><div class="cal-weekday">SAT</div>
+                <!-- Days will be generated -->
+            </div>
+            <button class="res-btn" id="reserveBtn">예약하기 (RESERVE)</button>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="footer-inner">
+            <div class="footer-brand">NULL GALLERY</div>
+            <div class="footer-bottom">
+                <p>© 2026 NULL GALLERY. All Rights Reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+    <script>
+        // Reservation Page Specific Logic
+        document.addEventListener('DOMContentLoaded', () => {
+            const resList = document.getElementById('res-exhibition-list');
+            const reserveBtn = document.getElementById('reserveBtn');
+            let selectedEx = null;
+
+            // Load Active Exhibitions
+            async function loadActiveExhibitions() {
+                try {
+                    const response = await fetch('exhibitions.csv');
+                    const data = await response.text();
+                    const rows = data.split('\n').slice(1).filter(row => row.trim() !== '');
+                    
+                    resList.innerHTML = '';
+                    rows.forEach(row => {
+                        const cols = row.split(',');
+                        const category = cols[4];
+                        if (category === 'current' || category === 'upcoming') {
+                            const li = document.createElement('li');
+                            li.className = 'res-item';
+                            li.innerHTML = `
+                                <h3>${cols[1]}</h3>
+                                <p>${cols[2]}</p>
+                                <p>${cols[3]}</p>
+                            `;
+                            li.onclick = () => {
+                                document.querySelectorAll('.res-item').forEach(i => i.classList.remove('active'));
+                                li.classList.add('active');
+                                selectedEx = cols[1];
+                                logAction(`Select Exhibition: ${selectedEx}`);
+                                generateCalendar();
+                            };
+                            resList.appendChild(li);
+                        }
+                    });
+                } catch (e) { console.error(e); }
+            }
+
+            function generateCalendar() {
+                const grid = document.querySelector('.calendar-grid');
+                const weekdays = grid.querySelectorAll('.cal-weekday');
+                grid.innerHTML = '';
+                weekdays.forEach(w => grid.appendChild(w));
+
+                for (let i = 1; i <= 30; i++) {
+                    const day = document.createElement('div');
+                    day.className = 'cal-day';
+                    day.innerText = i;
+                    day.onclick = () => {
+                        document.querySelectorAll('.cal-day').forEach(d => d.classList.remove('selected'));
+                        day.classList.add('selected');
+                        logAction(`Select Date: 2026-06-${i} for ${selectedEx}`);
+                    };
+                    grid.appendChild(day);
+                }
+            }
+
+            function logAction(action) {
+                const now = new Date();
+                const logEntry = {
+                    timestamp: now.toLocaleString(),
+                    action: action,
+                    userAgent: navigator.userAgent
+                };
+                
+                // 시뮬레이션 로그 저장 (콘솔 출력 및 로컬 스토리지)
+                console.log("%c[RESERVATION LOG]", "color: #00ff00; font-weight: bold;", logEntry);
+                
+                let logs = JSON.parse(localStorage.getItem('null_res_logs') || '[]');
+                logs.push(logEntry);
+                localStorage.setItem('null_res_logs', JSON.stringify(logs));
+            }
+
+            reserveBtn.addEventListener('click', () => {
+                logAction(`CLICK RESERVE BUTTON: ${selectedEx || 'None'}`);
+                alert("아직 없는 전시입니다.");
+            });
+
+            loadActiveExhibitions();
+            generateCalendar();
+        });
+    </script>
+</body>
+</html>
