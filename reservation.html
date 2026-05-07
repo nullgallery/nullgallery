@@ -1,41 +1,146 @@
 <!DOCTYPE html>
 <html lang="ko">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>전시예약 | 밀양 널갤러리 NULL GALLERY</title>
     <meta name="description" content="밀양 널갤러리(NULL GALLERY) 전시 예약 페이지. 현재 진행 중인 전시를 확인하고 편리하게 예약하세요.">
     <link rel="stylesheet" href="style.css">
-    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Noto+Sans+KR:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Noto+Sans+KR:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet">
     <style>
-        .res-container { max-width: 1200px; margin: 0 auto; padding: 100px 48px; display: grid; grid-template-columns: 1fr 1fr; gap: 80px; }
-        .res-select-area h2 { font-family: 'Bebas Neue', sans-serif; font-size: 36px; margin-bottom: 40px; }
-        .res-list { list-style: none; }
-        .res-item { padding: 30px; border: 1px solid #eee; margin-bottom: 20px; cursor: pointer; transition: 0.3s; }
-        .res-item:hover, .res-item.active { border-color: #000; background: #fafafa; }
-        .res-item h3 { font-size: 20px; margin-bottom: 10px; }
-        .res-item p { font-size: 14px; color: #666; }
+        .res-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 100px 48px;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 80px;
+        }
 
-        .calendar-area { position: sticky; top: 120px; }
-        .calendar-header { display: flex; justify-content: space-between; align-items: center; margin-bottom: 20px; }
-        .calendar-grid { display: grid; grid-template-columns: repeat(7, 1fr); gap: 10px; text-align: center; }
-        .cal-day { padding: 15px 0; background: #f9f9f9; border-radius: 4px; font-size: 14px; cursor: pointer; }
-        .cal-day:hover { background: #eee; }
-        .cal-day.disabled { opacity: 0.2; cursor: not-allowed; }
-        .cal-day.selected { background: #000; color: #fff; }
-        .cal-weekday { font-weight: 700; padding-bottom: 10px; font-size: 12px; color: #999; }
+        .res-select-area h2 {
+            font-family: 'Bebas Neue', sans-serif;
+            font-size: 36px;
+            margin-bottom: 40px;
+        }
 
-        .res-summary { margin-top: 40px; padding-top: 30px; border-top: 1px solid #eee; }
-        .res-price-info { display: flex; justify-content: space-between; margin-bottom: 10px; font-size: 15px; }
-        .res-btn { width: 100%; padding: 20px; background: #000; color: #fff; font-weight: 700; margin-top: 30px; transition: 0.3s; }
-        .res-btn:hover { background: #333; }
+        .res-list {
+            list-style: none;
+        }
+
+        .res-item {
+            padding: 30px;
+            border: 1px solid #eee;
+            margin-bottom: 20px;
+            cursor: pointer;
+            transition: 0.3s;
+        }
+
+        .res-item:hover,
+        .res-item.active {
+            border-color: #000;
+            background: #fafafa;
+        }
+
+        .res-item h3 {
+            font-size: 20px;
+            margin-bottom: 10px;
+        }
+
+        .res-item p {
+            font-size: 14px;
+            color: #666;
+        }
+
+        .calendar-area {
+            position: sticky;
+            top: 120px;
+        }
+
+        .calendar-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 20px;
+        }
+
+        .calendar-grid {
+            display: grid;
+            grid-template-columns: repeat(7, 1fr);
+            gap: 10px;
+            text-align: center;
+        }
+
+        .cal-day {
+            padding: 15px 0;
+            background: #f9f9f9;
+            border-radius: 4px;
+            font-size: 14px;
+            cursor: pointer;
+        }
+
+        .cal-day:hover {
+            background: #eee;
+        }
+
+        .cal-day.disabled {
+            opacity: 0.2;
+            cursor: not-allowed;
+        }
+
+        .cal-day.selected {
+            background: #000;
+            color: #fff;
+        }
+
+        .cal-weekday {
+            font-weight: 700;
+            padding-bottom: 10px;
+            font-size: 12px;
+            color: #999;
+        }
+
+        .res-summary {
+            margin-top: 40px;
+            padding-top: 30px;
+            border-top: 1px solid #eee;
+        }
+
+        .res-price-info {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 10px;
+            font-size: 15px;
+        }
+
+        .res-btn {
+            width: 100%;
+            padding: 20px;
+            background: #000;
+            color: #fff;
+            font-weight: 700;
+            margin-top: 30px;
+            transition: 0.3s;
+        }
+
+        .res-btn:hover {
+            background: #333;
+        }
 
         @media (max-width: 1024px) {
-            .res-container { grid-template-columns: 1fr; }
-            .calendar-area { position: static; }
+            .res-container {
+                grid-template-columns: 1fr;
+            }
+
+            .calendar-area {
+                position: static;
+            }
         }
     </style>
 </head>
+
 <body class="page-inner">
     <header class="header header--dark" id="header">
         <div class="header-logo"><a href="index.html">NULL</a></div>
@@ -96,7 +201,13 @@
                 <h3 id="cal-month-year">2026.06</h3>
             </div>
             <div class="calendar-grid">
-                <div class="cal-weekday">SUN</div><div class="cal-weekday">MON</div><div class="cal-weekday">TUE</div><div class="cal-weekday">WED</div><div class="cal-weekday">THU</div><div class="cal-weekday">FRI</div><div class="cal-weekday">SAT</div>
+                <div class="cal-weekday">SUN</div>
+                <div class="cal-weekday">MON</div>
+                <div class="cal-weekday">TUE</div>
+                <div class="cal-weekday">WED</div>
+                <div class="cal-weekday">THU</div>
+                <div class="cal-weekday">FRI</div>
+                <div class="cal-weekday">SAT</div>
                 <!-- Days will be generated -->
             </div>
             <button class="res-btn" id="reserveBtn">예약하기 (RESERVE)</button>
@@ -126,7 +237,7 @@
                     const response = await fetch('exhibitions.csv');
                     const data = await response.text();
                     const rows = data.split('\n').slice(1).filter(row => row.trim() !== '');
-                    
+
                     resList.innerHTML = '';
                     rows.forEach(row => {
                         const cols = row.split(',');
@@ -178,10 +289,10 @@
                     action: action,
                     userAgent: navigator.userAgent
                 };
-                
+
                 // 1. 브라우저 콘솔 기록
                 console.log("%c[RESERVATION LOG]", "color: #00ff00; font-weight: bold;", logData);
-                
+
                 // 2. 로컬 스토리지 기록
                 let logs = JSON.parse(localStorage.getItem('null_res_logs') || '[]');
                 logs.push(logData);
@@ -193,8 +304,8 @@
 
             function sendToGoogleSheet(data) {
                 // 이 URL은 사용자가 구글 앱스 스크립트(Apps Script) 배포 후 생성된 URL로 교체해야 합니다.
-                const GOOGLE_SCRIPT_URL = "https://script.google.com/macros/s/AKfycby_PLACEHOLDER/exec";
-                
+                const GOOGLE_SCRIPT_URL = "https://script.google.com/macros/s/AKfycbwXrbK0lVJfLXK53i8Tyxanb61q7k4f82buJ98uHa9WqH1Cqz3cvo2q5rNEuqhTMfifIA/exec";
+
                 if (GOOGLE_SCRIPT_URL.includes("PLACEHOLDER")) return;
 
                 fetch(GOOGLE_SCRIPT_URL, {
@@ -215,4 +326,5 @@
         });
     </script>
 </body>
+
 </html>
