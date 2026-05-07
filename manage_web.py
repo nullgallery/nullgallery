@@ -25,9 +25,23 @@ def manage():
         os.makedirs(rev_dir)
         print(f"[NEW] Created folder: {rev_dir}")
     
-    with open(CSV_PATH, mode='r', encoding='utf-8') as f:
-        reader = csv.DictReader(f)
-        for row in reader:
+    # 인코딩 문제 방지를 위해 utf-8-sig (BOM 대응) 시도 후 실패 시 cp949 시도
+    encoding_list = ['utf-8-sig', 'cp949', 'utf-8']
+    csv_data = None
+    
+    for enc in encoding_list:
+        try:
+            with open(CSV_PATH, mode='r', encoding=enc) as f:
+                csv_data = list(csv.DictReader(f))
+                break
+        except UnicodeDecodeError:
+            continue
+    
+    if csv_data is None:
+        print(f"Error: Could not decode {CSV_PATH}. Please check file encoding.")
+        return
+
+    for row in csv_data:
             folder_name = row['folder']
             ex_dir = os.path.join(IMAGES_DIR, folder_name)
             if not os.path.exists(ex_dir):
