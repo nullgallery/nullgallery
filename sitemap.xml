@@ -1,28 +1,33 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
-    <loc>https://nullgallery.github.io/index.html</loc>
-    <lastmod>2026-05-07</lastmod>
+    <loc>https://nullgallery.kr/index.html</loc>
+    <lastmod>2026-05-08</lastmod>
     <priority>1.0</priority>
   </url>
   <url>
-    <loc>https://nullgallery.github.io/exhibition.html</loc>
-    <lastmod>2026-05-07</lastmod>
+    <loc>https://nullgallery.kr/exhibition.html</loc>
+    <lastmod>2026-05-08</lastmod>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://nullgallery.kr/visit.html</loc>
+    <lastmod>2026-05-08</lastmod>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://nullgallery.kr/reviews.html</loc>
+    <lastmod>2026-05-08</lastmod>
     <priority>0.9</priority>
   </url>
   <url>
-    <loc>https://nullgallery.github.io/visit.html</loc>
-    <lastmod>2026-05-07</lastmod>
+    <loc>https://nullgallery.kr/reservation.html</loc>
+    <lastmod>2026-05-08</lastmod>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://nullgallery.github.io/reviews.html</loc>
-    <lastmod>2026-05-07</lastmod>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://nullgallery.github.io/ron_mueck.html</loc>
-    <lastmod>2026-05-07</lastmod>
-    <priority>0.8</priority>
+    <loc>https://nullgallery.kr/ron_mueck.html</loc>
+    <lastmod>2026-05-08</lastmod>
+    <priority>0.7</priority>
   </url>
 </urlset>
