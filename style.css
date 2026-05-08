@@ -1,9 +1,9 @@
 /* ============================================================
-   NULL GALLERY â€” Global Stylesheet
+   NULL GALLERY ??Global Stylesheet
    Inspired by Leeum Museum of Art's minimal luxury aesthetic
    ============================================================ */
 
-/* â”€â”€ TOKENS â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€ */
+/* ?€?€ TOKENS ?€?€?€?€?€?€?€?€?€?€?€?€?€?€?€?€?€?€?€?€?€?€?€?€?€?€?€?€?€?€?€?€?€?€?€?€?€?€?€?€?€?€?€?€?€?€?€ */
 :root {
     --black:   #0a0a0a;
     --white:   #f8f8f6;
@@ -22,7 +22,7 @@
     --transition: 0.45s cubic-bezier(0.25, 0.46, 0.45, 0.94);
 }
 
-/* â”€â”€ RESET â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€ */
+/* ?€?€ RESET ?€?€?€?€?€?€?€?€?€?€?€?€?€?€?€?€?€?€?€?€?€?€?€?€?€?€?€?€?€?€?€?€?€?€?€?€?€?€?€?€?€?€?€?€?€?€?€?€?€ */
 *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
 html { scroll-behavior: smooth; }
 body {
@@ -38,7 +38,7 @@ a { text-decoration: none; color: inherit; }
 img { display: block; width: 100%; }
 button { background: none; border: none; cursor: pointer; }
 
-/* â”€â”€ HEADER â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€ */
+/* ?€?€ HEADER ?€?€?€?€?€?€?€?€?€?€?€?€?€?€?€?€?€?€?€?€?€?€?€?€?€?€?€?€?€?€?€?€?€?€?€?€?€?€?€?€?€?€?€?€?€?€?€ */
 .header {
     position: fixed;
     top: 0; left: 0;
@@ -111,7 +111,7 @@ button { background: none; border: none; cursor: pointer; }
 }
 .header.transparent .menu-btn span { background: var(--white); }
 
-/* â”€â”€ MENU OVERLAY â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€ */
+/* ?€?€ MENU OVERLAY ?€?€?€?€?€?€?€?€?€?€?€?€?€?€?€?€?€?€?€?€?€?€?€?€?€?€?€?€?€?€?€?€?€?€?€?€?€?€?€ */
 .menu-overlay {
     position: fixed;
     inset: 0;
@@ -168,7 +168,7 @@ button { background: none; border: none; cursor: pointer; }
     line-height: 2;
 }
 
-/* â”€â”€ HERO (LANDING) â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€ */
+/* ?€?€ HERO (LANDING) ?€?€?€?€?€?€?€?€?€?€?€?€?€?€?€?€?€?€?€?€?€?€?€?€?€?€?€?€?€?€?€?€?€?€?€?€?€?€?€?€ */
 .hero {
     position: relative;
     height: 100vh;
@@ -178,7 +178,7 @@ button { background: none; border: none; cursor: pointer; }
     align-items: flex-end;
     padding: 0 48px 80px;
 }
-/* â”€â”€ HERO SLIDESHOW â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€ */
+/* ?€?€ HERO SLIDESHOW ?€?€?€?€?€?€?€?€?€?€?€?€?€?€?€?€?€?€?€?€?€?€?€?€?€?€?€?€?€?€?€?€?€?€?€?€?€?€?€ */
 .hero-slideshow {
     position: absolute;
     inset: 0;
@@ -271,7 +271,7 @@ button { background: none; border: none; cursor: pointer; }
     50% { opacity: 0.8; transform: scaleY(0.5); transform-origin: top; }
 }
 
-/* â”€â”€ ABOUT STRIP â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€ */
+/* ?€?€ ABOUT STRIP ?€?€?€?€?€?€?€?€?€?€?€?€?€?€?€?€?€?€?€?€?€?€?€?€?€?€?€?€?€?€?€?€?€?€?€?€?€?€?€?€?€?€?€ */
 .about-strip {
     padding: 80px 48px;
     border-bottom: 1px solid var(--grey-5);
@@ -307,7 +307,7 @@ button { background: none; border: none; cursor: pointer; }
 }
 .strip-link:hover { opacity: 0.45; }
 
-/* â”€â”€ EXHIBITIONS SECTION (LANDING) â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€ */
+/* ?€?€ EXHIBITIONS SECTION (LANDING) ?€?€?€?€?€?€?€?€?€?€?€?€?€?€?€?€?€?€?€?€?€?€?€?€?€ */
 .section-exhibitions {
     padding: 80px 48px 100px;
     max-width: 1400px;
@@ -344,7 +344,7 @@ button { background: none; border: none; cursor: pointer; }
 .exhibit-img-wrap {
     overflow: hidden;
     margin-bottom: 20px;
-    aspect-ratio: 3 / 2;
+    aspect-ratio: 792 / 1224;
     background: var(--grey-6);
 }
 .exhibit-img {
@@ -373,7 +373,7 @@ button { background: none; border: none; cursor: pointer; }
 .exhibit-period { font-size: 0.8rem; color: var(--grey-3); }
 .exhibit-venue  { font-size: 0.75rem; color: var(--grey-4); margin-top: 4px; }
 
-/* â”€â”€ EVENT STRIP â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€ */
+/* ?€?€ EVENT STRIP ?€?€?€?€?€?€?€?€?€?€?€?€?€?€?€?€?€?€?€?€?€?€?€?€?€?€?€?€?€?€?€?€?€?€?€?€?€?€?€?€?€?€?€ */
 .event-strip {
     background: var(--black);
     padding: 72px 48px;
@@ -414,7 +414,7 @@ button { background: none; border: none; cursor: pointer; }
 }
 .event-cta:hover { border-color: var(--white); background: rgba(255,255,255,0.06); }
 
-/* â”€â”€ PAGE HERO (INNER PAGES) â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€ */
+/* ?€?€ PAGE HERO (INNER PAGES) ?€?€?€?€?€?€?€?€?€?€?€?€?€?€?€?€?€?€?€?€?€?€?€?€?€?€?€?€?€?€?€ */
 .page-hero {
     border-bottom: 1px solid var(--grey-5);
     padding: 64px 48px 40px;
@@ -429,7 +429,7 @@ button { background: none; border: none; cursor: pointer; }
 }
 .page-hero-inner h1 em { font-style: normal; opacity: 0.3; margin-left: 20px; font-size: 0.6em; font-weight: 300; }
 
-/* â”€â”€ FILTER TABS â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€ */
+/* ?€?€ FILTER TABS ?€?€?€?€?€?€?€?€?€?€?€?€?€?€?€?€?€?€?€?€?€?€?€?€?€?€?€?€?€?€?€?€?€?€?€?€?€?€?€?€?€?€?€ */
 .filter-tabs {
     display: flex;
     gap: 0;
@@ -447,7 +447,7 @@ button { background: none; border: none; cursor: pointer; }
 }
 .tab.active, .tab:hover { color: var(--black); border-bottom-color: var(--black); }
 
-/* â”€â”€ EXHIBITION LIST â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€ */
+/* ?€?€ EXHIBITION LIST ?€?€?€?€?€?€?€?€?€?€?€?€?€?€?€?€?€?€?€?€?€?€?€?€?€?€?€?€?€?€?€?€?€?€?€?€?€?€?€ */
 .ex-list { max-width: 1400px; margin: 0 auto; padding: 0 48px 100px; }
 .ex-item { padding: 0; }
 .ex-item-inner {
@@ -462,7 +462,7 @@ button { background: none; border: none; cursor: pointer; }
 .ex-img-wrap {
     position: relative;
     overflow: hidden;
-    aspect-ratio: 4/3;
+    aspect-ratio: 792 / 1224;
     background: var(--grey-6);
 }
 .ex-img {
@@ -507,7 +507,7 @@ button { background: none; border: none; cursor: pointer; }
 .ex-item-inner:hover .ex-arrow { color: var(--black); transform: translateX(6px); }
 .ex-divider { height: 1px; background: var(--grey-5); }
 
-/* â”€â”€ VISIT PAGE â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€ */
+/* ?€?€ VISIT PAGE ?€?€?€?€?€?€?€?€?€?€?€?€?€?€?€?€?€?€?€?€?€?€?€?€?€?€?€?€?€?€?€?€?€?€?€?€?€?€?€?€?€?€?€?€ */
 .visit-main { padding-bottom: 120px; }
 .visit-map-wrap {
     width: 100%;
@@ -608,7 +608,7 @@ button { background: none; border: none; cursor: pointer; }
 }
 .space-cta:hover { opacity: 0.65; }
 
-/* â”€â”€ FOOTER â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€ */
+/* ?€?€ FOOTER ?€?€?€?€?€?€?€?€?€?€?€?€?€?€?€?€?€?€?€?€?€?€?€?€?€?€?€?€?€?€?€?€?€?€?€?€?€?€?€?€?€?€?€?€?€?€?€?€ */
 .footer {
     background: var(--black);
     padding: 64px 48px 40px;
@@ -649,7 +649,7 @@ button { background: none; border: none; cursor: pointer; }
     letter-spacing: 1px;
 }
 
-/* â”€â”€ ANIMATIONS â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€ */
+/* ?€?€ ANIMATIONS ?€?€?€?€?€?€?€?€?€?€?€?€?€?€?€?€?€?€?€?€?€?€?€?€?€?€?€?€?€?€?€?€?€?€?€?€?€?€?€?€?€?€?€?€ */
 .fade-in {
     opacity: 0;
     transform: translateY(24px);
@@ -657,7 +657,7 @@ button { background: none; border: none; cursor: pointer; }
 }
 .fade-in.visible { opacity: 1; transform: translateY(0); }
 
-/* â”€â”€ RESPONSIVE â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€ */
+/* ?€?€ RESPONSIVE ?€?€?€?€?€?€?€?€?€?€?€?€?€?€?€?€?€?€?€?€?€?€?€?€?€?€?€?€?€?€?€?€?€?€?€?€?€?€?€?€?€?€?€?€ */
 @media (max-width: 1024px) {
     .exhibition-grid { grid-template-columns: 1fr; }
     .visit-info-grid { grid-template-columns: 1fr; }
