@@ -1,1 +1,1 @@
-const HERO_MEDIA = ['hero_main2.png', 'hero_main3.png', 'hero_main_drone.mp4'];
+const HERO_MEDIA = ['hero_main_drone.mp4', 'hero_main2.png', 'hero_main3.png'];

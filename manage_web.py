@@ -57,7 +57,8 @@ def manage():
     print("\n=== Scanning for Hero Media... ===")
     files = os.listdir(IMAGES_DIR)
     hero_files = [f for f in files if f.startswith('hero_main')]
-    hero_files.sort()
+    # 비디오(.mp4)가 가장 먼저 오도록 정렬
+    hero_files.sort(key=lambda x: (not x.endswith('.mp4'), x))
     
     print(f"Detected {len(hero_files)} hero files: {hero_files}")
     
