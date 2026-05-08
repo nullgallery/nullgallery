@@ -120,6 +120,25 @@ document.addEventListener('DOMContentLoaded', () => {
                     url: cols[7] ? cols[7].replace(/"/g, '').trim() : '#'
                 };
             });
+            
+            // Hero Section Rendering
+            const heroTitle = document.getElementById('hero-title');
+            const heroDate = document.getElementById('hero-date');
+            if (heroTitle && heroDate && exhibitions.length > 0) {
+                const mainEx = exhibitions.find(ex => ex.category === 'current' || ex.category === 'upcoming') || exhibitions[0];
+                let formattedTitle = mainEx.title;
+                // ":" 기준으로 줄바꿈 처리 (예: "RON MUECK: 생명의 무게")
+                if (formattedTitle.includes(':')) {
+                    const parts = formattedTitle.split(':');
+                    formattedTitle = `${parts[0]}<br><em>${parts[1].trim()}</em>`;
+                }
+                heroTitle.innerHTML = formattedTitle;
+                heroDate.textContent = mainEx.period;
+                const heroCTA = document.querySelector('.hero-cta');
+                if (heroCTA && mainEx.url !== '#') {
+                    heroCTA.href = mainEx.url;
+                }
+            }
 
             // Exhibition Page Rendering
             if (exContainer) {
