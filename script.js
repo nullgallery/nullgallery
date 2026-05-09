@@ -309,7 +309,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
                 card.innerHTML = `
                     <div class="review-img-wrap">
-                        <img src="images/reviews/${image}" alt="${seoAlt}" loading="lazy">
+                        <img src="images/reviews/${image}" alt="[경상도 전시 추천] ${seoAlt}" loading="lazy">
                     </div>
                     <div class="review-body">
                         <p class="review-text">${comment}</p>
