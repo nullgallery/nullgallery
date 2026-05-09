@@ -1,33 +1,38 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+        xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">
   <url>
     <loc>https://nullgallery.kr/index.html</loc>
-    <lastmod>2026-05-08</lastmod>
+    <lastmod>2026-05-09</lastmod>
     <priority>1.0</priority>
+    <image:image>
+      <image:loc>https://nullgallery.kr/images/hero_main2.png</image:loc>
+      <image:caption>밀양 가볼만한곳 1순위 랜드마크 널갤러리 전경</image:caption>
+      <image:title>밀양 널갤러리 메인 전경</image:title>
+    </image:image>
   </url>
   <url>
     <loc>https://nullgallery.kr/exhibition.html</loc>
-    <lastmod>2026-05-08</lastmod>
+    <lastmod>2026-05-09</lastmod>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://nullgallery.kr/visit.html</loc>
-    <lastmod>2026-05-08</lastmod>
+    <lastmod>2026-05-09</lastmod>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://nullgallery.kr/reviews.html</loc>
-    <lastmod>2026-05-08</lastmod>
+    <lastmod>2026-05-09</lastmod>
     <priority>0.9</priority>
+    <image:image>
+      <image:loc>https://nullgallery.kr/images/reviews/miryang-nullgallery-hotplace-review-1.png</image:loc>
+      <image:caption>밀양 핫플 널갤러리 실제 방문객 리뷰 이미지</image:caption>
+    </image:image>
   </url>
   <url>
     <loc>https://nullgallery.kr/reservation.html</loc>
-    <lastmod>2026-05-08</lastmod>
+    <lastmod>2026-05-09</lastmod>
     <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://nullgallery.kr/ron_mueck.html</loc>
-    <lastmod>2026-05-08</lastmod>
-    <priority>0.7</priority>
   </url>
 </urlset>
