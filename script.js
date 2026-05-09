@@ -304,12 +304,12 @@ document.addEventListener('DOMContentLoaded', () => {
                 const card = document.createElement('div');
                 card.className = 'review-card fade-in';
                 
-                // SEO용 키워드 조합
-                const seoAlt = `밀양 널갤러리 후기 - ${comment.substring(0, 20)}... 밀양 현대전시, 밀양 전시, 밀양 신상갤러리, 밀양 핫플 추천`;
+                // SEO용 키워드 조합: '밀양 가볼만한곳', '밀양 핫플', '널갤러리' 강조
+                const seoAlt = `[밀양 가볼만한곳] 널갤러리 방문 후기 - ${comment.substring(0, 30)}... (밀양 핫플 추천, 경남 전시회)`;
 
                 card.innerHTML = `
                     <div class="review-img-wrap">
-                        <img src="images/reviews/${image}" alt="[경상도 전시 추천] ${seoAlt}" loading="lazy">
+                        <img src="images/reviews/${image}" alt="${seoAlt}" title="널갤러리 - 밀양 핫플 추천" loading="lazy">
                     </div>
                     <div class="review-body">
                         <p class="review-text">${comment}</p>
