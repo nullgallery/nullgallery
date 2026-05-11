@@ -18,9 +18,9 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 
     // ── 메뉴 오버레이 ───────────────────────────────────
-    const menuBtn   = document.getElementById('menuBtn');
+    const menuBtn = document.getElementById('menuBtn');
     const menuClose = document.getElementById('menuClose');
-    const overlay   = document.getElementById('menuOverlay');
+    const overlay = document.getElementById('menuOverlay');
 
     if (menuBtn && overlay) {
         menuBtn.addEventListener('click', () => {
@@ -109,18 +109,18 @@ document.addEventListener('DOMContentLoaded', () => {
             const rows = data.split('\n').slice(1).filter(row => row.trim() !== '');
             const exhibitions = rows.map(row => {
                 const cols = row.split(/,(?=(?:(?:[^"]*"){2})*[^"]*$)/);
-                return { 
-                    id: cols[0], 
-                    title: cols[1].replace(/"/g, ''), 
-                    artist: cols[2].replace(/"/g, ''), 
-                    period: cols[3].replace(/"/g, ''), 
-                    category: cols[4].replace(/"/g, ''), 
-                    folder: cols[5].replace(/"/g, ''), 
+                return {
+                    id: cols[0],
+                    title: cols[1].replace(/"/g, ''),
+                    artist: cols[2].replace(/"/g, ''),
+                    period: cols[3].replace(/"/g, ''),
+                    category: cols[4].replace(/"/g, ''),
+                    folder: cols[5].replace(/"/g, ''),
                     thumbnail: cols[6].replace(/"/g, ''),
                     url: cols[7] ? cols[7].replace(/"/g, '').trim() : '#'
                 };
             });
-            
+
             // Hero Section Rendering
             const heroTitle = document.getElementById('hero-title');
             const heroDate = document.getElementById('hero-date');
@@ -176,10 +176,10 @@ document.addEventListener('DOMContentLoaded', () => {
             const article = document.createElement('article');
             article.className = 'ex-item fade-in';
             article.dataset.category = ex.category;
-            
+
             const isExternal = ex.url !== '#';
-            const clickAction = isExternal 
-                ? `location.href='${ex.url}'` 
+            const clickAction = isExternal
+                ? `location.href='${ex.url}'`
                 : `openGallery('${ex.title}', '${ex.artist}', '${ex.folder}', '${ex.thumbnail}')`;
 
             article.innerHTML = `
@@ -236,8 +236,8 @@ document.addEventListener('DOMContentLoaded', () => {
         const overlay = document.getElementById('gallery-overlay');
         const mainImg = document.getElementById('gallery-main-img');
         const gThumbs = document.getElementById('galleryThumbs');
-        const gTitle  = document.getElementById('galleryTitle');
-        const gDesc   = document.getElementById('galleryDesc');
+        const gTitle = document.getElementById('galleryTitle');
+        const gDesc = document.getElementById('galleryDesc');
 
         overlay.classList.add('open');
         mainImg.src = `images/${thumb}`;
@@ -291,7 +291,7 @@ document.addEventListener('DOMContentLoaded', () => {
             const data = await response.text();
             const rows = data.split('\n').slice(1).filter(row => row.trim() !== '');
             revContainer.innerHTML = '';
-            
+
             rows.forEach(row => {
                 const cols = row.split(/,(?=(?:(?:[^"]*"){2})*[^"]*$)/);
                 if (cols.length < 3) return;
@@ -300,10 +300,10 @@ document.addEventListener('DOMContentLoaded', () => {
                 const comment = cols[1].replace(/"/g, '').trim();
                 const image = cols[2].replace(/"/g, '').trim();
                 const date = cols[3] ? cols[3].replace(/"/g, '').trim() : '';
-                
+
                 const card = document.createElement('div');
                 card.className = 'review-card fade-in';
-                
+
                 // SEO용 키워드 조합: '밀양 가볼만한곳', '밀양 핫플', '널갤러리' 강조
                 const seoAlt = `[밀양 가볼만한곳] 널갤러리 방문 후기 - ${comment.substring(0, 30)}... (밀양 핫플 추천, 경남 전시회)`;
 
@@ -376,7 +376,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
             // 구글 시트에 로그 기록 전송 (Apps Script Web App 연동)
             // 사용자 기기 환경(User Agent)과 시간 정보 전송
-            const webAppUrl = "YOUR_GOOGLE_APPS_SCRIPT_WEB_APP_URL"; // 여기에 발급받은 URL을 입력해야 합니다.
+            const webAppUrl = "https://script.google.com/macros/s/AKfycbwe-1Yy0wqa6A_gpnFN51rrH53Ez6JeTNv5iYeml-avGxjJW31f6TyJMH2_W-EuD0Q7jg/exec"; // 여기에 발급받은 URL을 입력해야 합니다.
             if (webAppUrl !== "YOUR_GOOGLE_APPS_SCRIPT_WEB_APP_URL") {
                 fetch(webAppUrl, {
                     method: 'POST',
