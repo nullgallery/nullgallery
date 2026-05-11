@@ -1,48 +1,43 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
-        xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">
-  <url>
-    <loc>https://nullgallery.kr/miryang-travel.html</loc>
-    <lastmod>2026-05-09</lastmod>
-    <priority>1.0</priority>
-    <image:image>
-      <image:loc>https://nullgallery.kr/images/hero_main2.png</image:loc>
-      <image:caption>밀양 가볼만한곳 1순위 — 널갤러리 (NULL GALLERY) 벤타블랙 건축</image:caption>
-      <image:title>밀양 핫플 널갤러리</image:title>
-    </image:image>
-  </url>
-  <url>
-    <loc>https://nullgallery.kr/index.html</loc>
-    <lastmod>2026-05-09</lastmod>
-    <priority>1.0</priority>
-    <image:image>
-      <image:loc>https://nullgallery.kr/images/hero_main2.png</image:loc>
-      <image:caption>밀양 가볼만한곳 1순위 랜드마크 널갤러리 전경</image:caption>
-      <image:title>밀양 널갤러리 메인 전경</image:title>
-    </image:image>
-  </url>
-  <url>
-    <loc>https://nullgallery.kr/exhibition.html</loc>
-    <lastmod>2026-05-09</lastmod>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://nullgallery.kr/visit.html</loc>
-    <lastmod>2026-05-09</lastmod>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://nullgallery.kr/reviews.html</loc>
-    <lastmod>2026-05-09</lastmod>
-    <priority>0.9</priority>
-    <image:image>
-      <image:loc>https://nullgallery.kr/images/reviews/miryang-nullgallery-hotplace-review-1.png</image:loc>
-      <image:caption>밀양 핫플 널갤러리 실제 방문객 리뷰 이미지</image:caption>
-    </image:image>
-  </url>
-  <url>
-    <loc>https://nullgallery.kr/reservation.html</loc>
-    <lastmod>2026-05-09</lastmod>
-    <priority>0.8</priority>
-  </url>
+<?xml version="1.0" encoding="utf-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">
+<url>
+<loc>https://nullgallery.kr/miryang-travel.html</loc>
+<lastmod>2026-05-09</lastmod>
+<priority>1.0</priority>
+<image:image>
+<image:loc>https://nullgallery.kr/images/hero_main2.png</image:loc>
+<image:caption>밀양 가볼만한곳 1순위 — 널갤러리 (NULL GALLERY) 벤타블랙 건축</image:caption>
+<image:title>밀양 핫플 널갤러리</image:title>
+</image:image>
+</url>
+<url>
+<loc>https://nullgallery.kr/index.html</loc>
+<lastmod>2026-05-09</lastmod>
+<priority>1.0</priority>
+<image:image>
+<image:loc>https://nullgallery.kr/images/hero_main2.png</image:loc>
+<image:caption>밀양 가볼만한곳 1순위 랜드마크 널갤러리 전경</image:caption>
+<image:title>밀양 널갤러리 메인 전경</image:title>
+</image:image>
+</url>
+<url>
+<loc>https://nullgallery.kr/exhibition.html</loc>
+<lastmod>2026-05-09</lastmod>
+<priority>0.8</priority>
+<image:image><image:loc>https://nullgallery.kr/images/ron_mueck_hero.png</image:loc><image:caption>밀양 가볼만한곳 널갤러리 전시 - RON MUECK: 생명의 무게</image:caption></image:image></url>
+<url>
+<loc>https://nullgallery.kr/visit.html</loc>
+<lastmod>2026-05-09</lastmod>
+<priority>0.8</priority>
+</url>
+<url>
+<loc>https://nullgallery.kr/reviews.html</loc>
+<lastmod>2026-05-09</lastmod>
+<priority>0.9</priority>
+<image:image><image:loc>https://nullgallery.kr/images/reviews/miryang-nullgallery-hotplace-review-1.png</image:loc><image:caption>[밀양 가볼만한곳] 널갤러리 방문 후기 - 공간이 주는 힘이 대단해요. 100년 된 공장 터와 현... (밀양 핫플 추천, 경남 전시회)</image:caption></image:image><image:image><image:loc>https://nullgallery.kr/images/reviews/miryang-nullgallery-hotplace-review-2.png</image:loc><image:caption>[밀양 가볼만한곳] 널갤러리 방문 후기 - 론 뮤익 프리뷰 전시 정말 압도적이네요. 밀양 널갤러리... (밀양 핫플 추천, 경남 전시회)</image:caption></image:image><image:image><image:loc>https://nullgallery.kr/images/reviews/miryang-nullgallery-hotplace-review-3.png</image:loc><image:caption>[밀양 가볼만한곳] 널갤러리 방문 후기 - 벤타블랙 소재를 실제로 보니 정말 신기해요. 빛이 사라... (밀양 핫플 추천, 경남 전시회)</image:caption></image:image><image:image><image:loc>https://nullgallery.kr/images/reviews/miryang-nullgallery-hotplace-review-4.png</image:loc><image:caption>[밀양 가볼만한곳] 널갤러리 방문 후기 - 공간의 웅장함에 압도되어 한참을 멍하니 있었네요. 밀양... (밀양 핫플 추천, 경남 전시회)</image:caption></image:image><image:image><image:loc>https://nullgallery.kr/images/reviews/miryang-nullgallery-hotplace-review-5.png</image:loc><image:caption>[밀양 가볼만한곳] 널갤러리 방문 후기 - 빛을 빨아들이는 벤타블랙 건물이 너무 신선해요. 산업 ... (밀양 핫플 추천, 경남 전시회)</image:caption></image:image><image:image><image:loc>https://nullgallery.kr/images/reviews/miryang-nullgallery-hotplace-review-6.png</image:loc><image:caption>[밀양 가볼만한곳] 널갤러리 방문 후기 - 과거의 기억(굴뚝)과 미래의 감각(벤타블랙)이 공존하는... (밀양 핫플 추천, 경남 전시회)</image:caption></image:image><image:image><image:loc>https://nullgallery.kr/images/reviews/miryang-nullgallery-hotplace-review-7.png</image:loc><image:caption>[밀양 가볼만한곳] 널갤러리 방문 후기 - 산업 시대의 굴뚝과 현대 예술의 만남이라니, 밀양 핫플... (밀양 핫플 추천, 경남 전시회)</image:caption></image:image><image:image><image:loc>https://nullgallery.kr/images/reviews/miryang-nullgallery-hotplace-review-8.png</image:loc><image:caption>[밀양 가볼만한곳] 널갤러리 방문 후기 - 론 뮤익 프리뷰, 작품 하나하나가 살아 움직이는 것 같... (밀양 핫플 추천, 경남 전시회)</image:caption></image:image><image:image><image:loc>https://nullgallery.kr/images/reviews/miryang-nullgallery-hotplace-review-9.png</image:loc><image:caption>[밀양 가볼만한곳] 널갤러리 방문 후기 - 벤타블랙 건물의 그 깊은 검은색이 웅장한 굴뚝과 어우러... (밀양 핫플 추천, 경남 전시회)</image:caption></image:image><image:image><image:loc>https://nullgallery.kr/images/reviews/miryang-nullgallery-hotplace-review-10.png</image:loc><image:caption>[밀양 가볼만한곳] 널갤러리 방문 후기 - 과거의 기억(굴뚝)과 미래의 감각(벤타블랙)이 공존하는... (밀양 핫플 추천, 경남 전시회)</image:caption></image:image><image:image><image:loc>https://nullgallery.kr/images/reviews/miryang-nullgallery-hotplace-review-11.png</image:loc><image:caption>[밀양 가볼만한곳] 널갤러리 방문 후기 - 공간 자체가 하나의 거대한 예술작품입니다. 밀양 가볼만... (밀양 핫플 추천, 경남 전시회)</image:caption></image:image><image:image><image:loc>https://nullgallery.kr/images/reviews/miryang-nullgallery-hotplace-review-12.png</image:loc><image:caption>[밀양 가볼만한곳] 널갤러리 방문 후기 - 론 뮤익 프리뷰 전시 정말 압도적이네요. 밀양 널갤러리... (밀양 핫플 추천, 경남 전시회)</image:caption></image:image><image:image><image:loc>https://nullgallery.kr/images/reviews/miryang-nullgallery-hotplace-review-13.png</image:loc><image:caption>[밀양 가볼만한곳] 널갤러리 방문 후기 - 공간이 주는 힘이 대단해요. 100년 된 공장 터와 현... (밀양 핫플 추천, 경남 전시회)</image:caption></image:image><image:image><image:loc>https://nullgallery.kr/images/reviews/miryang-nullgallery-hotplace-review-14.png</image:loc><image:caption>[밀양 가볼만한곳] 널갤러리 방문 후기 - 벤타블랙 소재를 실제로 보니 정말 신기해요. 빛이 사라... (밀양 핫플 추천, 경남 전시회)</image:caption></image:image><image:image><image:loc>https://nullgallery.kr/images/reviews/miryang-nullgallery-hotplace-review-15.png</image:loc><image:caption>[밀양 가볼만한곳] 널갤러리 방문 후기 - 벤타블랙 건물의 그 깊은 검은색이 웅장한 굴뚝과 어우러... (밀양 핫플 추천, 경남 전시회)</image:caption></image:image><image:image><image:loc>https://nullgallery.kr/images/reviews/miryang-nullgallery-hotplace-review-16.png</image:loc><image:caption>[밀양 가볼만한곳] 널갤러리 방문 후기 - 공간의 웅장함에 압도되어 한참을 멍하니 있었네요. 밀양... (밀양 핫플 추천, 경남 전시회)</image:caption></image:image><image:image><image:loc>https://nullgallery.kr/images/reviews/miryang-nullgallery-hotplace-review-17.png</image:loc><image:caption>[밀양 가볼만한곳] 널갤러리 방문 후기 - 산업 시대의 굴뚝과 현대 예술의 만남이라니, 밀양 핫플... (밀양 핫플 추천, 경남 전시회)</image:caption></image:image><image:image><image:loc>https://nullgallery.kr/images/reviews/miryang-nullgallery-hotplace-review-18.png</image:loc><image:caption>[밀양 가볼만한곳] 널갤러리 방문 후기 - 론 뮤익 프리뷰 전시 정말 압도적이네요. 밀양 널갤러리... (밀양 핫플 추천, 경남 전시회)</image:caption></image:image><image:image><image:loc>https://nullgallery.kr/images/reviews/miryang-nullgallery-hotplace-review-19.png</image:loc><image:caption>[밀양 가볼만한곳] 널갤러리 방문 후기 - 굴뚝과 벤타블랙의 조화가 예술입니다. 밀양 신상갤러리 ... (밀양 핫플 추천, 경남 전시회)</image:caption></image:image><image:image><image:loc>https://nullgallery.kr/images/reviews/miryang-nullgallery-hotplace-review-20.png</image:loc><image:caption>[밀양 가볼만한곳] 널갤러리 방문 후기 - 밀양 핫플답게 평일인데도 사람이 꽤 있네요. 그래도 공... (밀양 핫플 추천, 경남 전시회)</image:caption></image:image><image:image><image:loc>https://nullgallery.kr/images/reviews/miryang-nullgallery-hotplace-review-21.png</image:loc><image:caption>[밀양 가볼만한곳] 널갤러리 방문 후기 - 공간의 웅장함에 압도되어 한참을 멍하니 있었네요. 밀양... (밀양 핫플 추천, 경남 전시회)</image:caption></image:image><image:image><image:loc>https://nullgallery.kr/images/reviews/miryang-nullgallery-hotplace-review-22.png</image:loc><image:caption>[밀양 가볼만한곳] 널갤러리 방문 후기 - 밀양 전시 중 가장 인상 깊었습니다. 론 뮤익의 정교한... (밀양 핫플 추천, 경남 전시회)</image:caption></image:image><image:image><image:loc>https://nullgallery.kr/images/reviews/miryang-nullgallery-hotplace-review-23.png</image:loc><image:caption>[밀양 가볼만한곳] 널갤러리 방문 후기 - 예술을 넘어서 공간이 주는 치유를 경험하고 갑니다. 밀... (밀양 핫플 추천, 경남 전시회)</image:caption></image:image><image:image><image:loc>https://nullgallery.kr/images/reviews/miryang-nullgallery-hotplace-review-24.png</image:loc><image:caption>[밀양 가볼만한곳] 널갤러리 방문 후기 - 벤타블랙 건물 안에 들어가니 정말 다른 세상에 온 것 ... (밀양 핫플 추천, 경남 전시회)</image:caption></image:image><image:image><image:loc>https://nullgallery.kr/images/reviews/miryang-nullgallery-hotplace-review-25.png</image:loc><image:caption>[밀양 가볼만한곳] 널갤러리 방문 후기 - 밀양 신상갤러리 투어 왔는데, 론 뮤익 작품의 생생함과... (밀양 핫플 추천, 경남 전시회)</image:caption></image:image><image:image><image:loc>https://nullgallery.kr/images/reviews/miryang-nullgallery-hotplace-review-26.png</image:loc><image:caption>[밀양 가볼만한곳] 널갤러리 방문 후기 - 밀양 핫플답게 평일인데도 사람이 꽤 있네요. 그래도 공... (밀양 핫플 추천, 경남 전시회)</image:caption></image:image><image:image><image:loc>https://nullgallery.kr/images/reviews/miryang-nullgallery-hotplace-review-27.png</image:loc><image:caption>[밀양 가볼만한곳] 널갤러리 방문 후기 - 벤타블랙 건물의 그 깊은 검은색이 웅장한 굴뚝과 어우러... (밀양 핫플 추천, 경남 전시회)</image:caption></image:image><image:image><image:loc>https://nullgallery.kr/images/reviews/miryang-nullgallery-hotplace-review-28.png</image:loc><image:caption>[밀양 가볼만한곳] 널갤러리 방문 후기 - 과거의 기억(굴뚝)과 미래의 감각(벤타블랙)이 공존하는... (밀양 핫플 추천, 경남 전시회)</image:caption></image:image><image:image><image:loc>https://nullgallery.kr/images/reviews/miryang-nullgallery-hotplace-review-29.png</image:loc><image:caption>[밀양 가볼만한곳] 널갤러리 방문 후기 - 산업 시대의 굴뚝과 현대 예술의 만남이라니, 밀양 핫플... (밀양 핫플 추천, 경남 전시회)</image:caption></image:image><image:image><image:loc>https://nullgallery.kr/images/reviews/miryang-nullgallery-hotplace-review-30.png</image:loc><image:caption>[밀양 가볼만한곳] 널갤러리 방문 후기 - 거대한 굴뚝 아래 검은 벤타블랙 건물이 들어선 모습이 ... (밀양 핫플 추천, 경남 전시회)</image:caption></image:image><image:image><image:loc>https://nullgallery.kr/images/reviews/miryang-nullgallery-hotplace-review-31.png</image:loc><image:caption>[밀양 가볼만한곳] 널갤러리 방문 후기 - 예술을 넘어서 공간이 주는 치유를 경험하고 갑니다. 밀... (밀양 핫플 추천, 경남 전시회)</image:caption></image:image><image:image><image:loc>https://nullgallery.kr/images/reviews/miryang-nullgallery-hotplace-review-32.png</image:loc><image:caption>[밀양 가볼만한곳] 널갤러리 방문 후기 - 밀양 신상갤러리 투어 왔는데, 론 뮤익 작품의 생생함과... (밀양 핫플 추천, 경남 전시회)</image:caption></image:image><image:image><image:loc>https://nullgallery.kr/images/reviews/miryang-nullgallery-hotplace-review-33.png</image:loc><image:caption>[밀양 가볼만한곳] 널갤러리 방문 후기 - 벤타블랙 건물 안에 들어가니 정말 다른 세상에 온 것 ... (밀양 핫플 추천, 경남 전시회)</image:caption></image:image><image:image><image:loc>https://nullgallery.kr/images/reviews/miryang-nullgallery-hotplace-review-34.png</image:loc><image:caption>[밀양 가볼만한곳] 널갤러리 방문 후기 - 밀양 전시 중 가장 인상 깊었습니다. 론 뮤익의 정교한... (밀양 핫플 추천, 경남 전시회)</image:caption></image:image><image:image><image:loc>https://nullgallery.kr/images/reviews/miryang-nullgallery-hotplace-review-35.png</image:loc><image:caption>[밀양 가볼만한곳] 널갤러리 방문 후기 - 밀양 신상갤러리 투어 왔는데, 론 뮤익 작품의 생생함과... (밀양 핫플 추천, 경남 전시회)</image:caption></image:image><image:image><image:loc>https://nullgallery.kr/images/reviews/miryang-nullgallery-hotplace-review-36.png</image:loc><image:caption>[밀양 가볼만한곳] 널갤러리 방문 후기 - 굴뚝과 벤타블랙의 조화가 예술입니다. 밀양 신상갤러리 ... (밀양 핫플 추천, 경남 전시회)</image:caption></image:image><image:image><image:loc>https://nullgallery.kr/images/reviews/miryang-nullgallery-hotplace-review-37.png</image:loc><image:caption>[밀양 가볼만한곳] 널갤러리 방문 후기 - 밀양 전시 중 가장 인상 깊었습니다. 론 뮤익의 정교한... (밀양 핫플 추천, 경남 전시회)</image:caption></image:image><image:image><image:loc>https://nullgallery.kr/images/reviews/miryang-nullgallery-hotplace-review-38.png</image:loc><image:caption>[밀양 가볼만한곳] 널갤러리 방문 후기 - 밀양 핫플답게 평일인데도 사람이 꽤 있네요. 그래도 공... (밀양 핫플 추천, 경남 전시회)</image:caption></image:image><image:image><image:loc>https://nullgallery.kr/images/reviews/miryang-nullgallery-hotplace-review-39.png</image:loc><image:caption>[밀양 가볼만한곳] 널갤러리 방문 후기 - 론 뮤익 프리뷰, 작품 하나하나가 살아 움직이는 것 같... (밀양 핫플 추천, 경남 전시회)</image:caption></image:image><image:image><image:loc>https://nullgallery.kr/images/reviews/miryang-nullgallery-hotplace-review-40.png</image:loc><image:caption>[밀양 가볼만한곳] 널갤러리 방문 후기 - 거대한 굴뚝 아래 검은 벤타블랙 건물이 들어선 모습이 ... (밀양 핫플 추천, 경남 전시회)</image:caption></image:image><image:image><image:loc>https://nullgallery.kr/images/reviews/miryang-nullgallery-hotplace-review-41.png</image:loc><image:caption>[밀양 가볼만한곳] 널갤러리 방문 후기 - 론 뮤익 프리뷰, 작품 하나하나가 살아 움직이는 것 같... (밀양 핫플 추천, 경남 전시회)</image:caption></image:image></url>
+<url>
+<loc>https://nullgallery.kr/reservation.html</loc>
+<lastmod>2026-05-09</lastmod>
+<priority>0.8</priority>
+</url>
 </urlset>
