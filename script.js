@@ -340,4 +340,39 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 
     observeFadeIn();
+
+    // ── 진실 팝업 (예약 클릭 시) ─────────────────────────
+    const truthOverlay = document.createElement('div');
+    truthOverlay.id = 'truthOverlay';
+    truthOverlay.innerHTML = `
+        <div class="truth-modal">
+            <button class="truth-close" id="truthClose">✕</button>
+            <div class="truth-content">
+                <h2>아직 없는 장소입니다.</h2>
+                <p>안녕하세요 홍익대학교 건축학과 박경민이라고 합니다.</p>
+                <p>"디지털 이미지가 오늘날 장소를 존재하게 한다."라는 주제로 프로젝트를 진행 중 입니다.</p>
+                <p>그래서 몇십년간 폐허였던 장소를 AI를 통해 살아있는 것 처럼 만들고 지도에 노출시켰으며 광고를 했습니다.</p>
+                <p>귀한 시간 내주셔서 정말 감사하고 죄송합니다.</p>
+            </div>
+        </div>
+    `;
+    document.body.appendChild(truthOverlay);
+
+    const truthCloseBtn = document.getElementById('truthClose');
+    truthCloseBtn.addEventListener('click', () => {
+        truthOverlay.classList.remove('open');
+    });
+
+    document.querySelectorAll('a[href="reservation.html"]').forEach(link => {
+        link.addEventListener('click', (e) => {
+            e.preventDefault();
+            truthOverlay.classList.add('open');
+            // 만약 메뉴 오버레이가 열려있다면 닫아줌
+            const menuOverlay = document.getElementById('menuOverlay');
+            if (menuOverlay && menuOverlay.classList.contains('open')) {
+                menuOverlay.classList.remove('open');
+                document.body.style.overflow = '';
+            }
+        });
+    });
 });

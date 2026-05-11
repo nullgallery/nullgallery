@@ -767,3 +767,64 @@ button { background: none; border: none; cursor: pointer; }
 
 /* SEO Visually Hidden */
 .visually-hidden { position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px; overflow: hidden; clip: rect(0, 0, 0, 0); white-space: nowrap; border: 0; }
+
+/* ── 진실 팝업 오버레이 ────────────────────────────── */
+#truthOverlay {
+    position: fixed;
+    top: 0; left: 0; width: 100%; height: 100%;
+    background: rgba(0, 0, 0, 0.9);
+    z-index: 10000;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.4s ease;
+}
+#truthOverlay.open {
+    opacity: 1;
+    pointer-events: auto;
+}
+.truth-modal {
+    background: #000;
+    color: #fff;
+    border: 1px solid #333;
+    padding: 3rem 2rem;
+    max-width: 500px;
+    width: 90%;
+    text-align: center;
+    position: relative;
+    transform: translateY(20px);
+    transition: transform 0.4s ease;
+}
+#truthOverlay.open .truth-modal {
+    transform: translateY(0);
+}
+.truth-close {
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    background: none;
+    border: none;
+    color: #fff;
+    font-size: 1.5rem;
+    cursor: pointer;
+    line-height: 1;
+}
+.truth-content h2 {
+    font-family: 'Noto Sans KR', sans-serif;
+    font-size: 1.5rem;
+    margin-bottom: 1.5rem;
+    font-weight: 600;
+}
+.truth-content p {
+    font-family: 'Noto Sans KR', sans-serif;
+    font-size: 1rem;
+    line-height: 1.6;
+    margin-bottom: 1rem;
+    color: #ccc;
+    word-break: keep-all;
+}
+.truth-content p:last-child {
+    margin-bottom: 0;
+}
