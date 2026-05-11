@@ -373,6 +373,22 @@ document.addEventListener('DOMContentLoaded', () => {
                 menuOverlay.classList.remove('open');
                 document.body.style.overflow = '';
             }
+
+            // 구글 시트에 로그 기록 전송 (Apps Script Web App 연동)
+            // 사용자 기기 환경(User Agent)과 시간 정보 전송
+            const webAppUrl = "YOUR_GOOGLE_APPS_SCRIPT_WEB_APP_URL"; // 여기에 발급받은 URL을 입력해야 합니다.
+            if (webAppUrl !== "YOUR_GOOGLE_APPS_SCRIPT_WEB_APP_URL") {
+                fetch(webAppUrl, {
+                    method: 'POST',
+                    mode: 'no-cors',
+                    headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
+                    body: new URLSearchParams({
+                        'timestamp': new Date().toLocaleString('ko-KR', { timeZone: 'Asia/Seoul' }),
+                        'action': 'Reservation Clicked',
+                        'userAgent': navigator.userAgent
+                    })
+                }).catch(err => console.log('Logging failed:', err));
+            }
         });
     });
 });
