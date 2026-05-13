@@ -1,17 +1,15 @@
 <!DOCTYPE html>
-<html lang="ko">
 
+<html lang="ko">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>전시예약 | 밀양 널갤러리 NULL GALLERY</title>
-    <link rel="canonical" href="https://nullgallery.kr/reservation.html">
-    <meta name="description" content="밀양 널갤러리(NULL GALLERY) 전시 예약 페이지. 현재 진행 중인 전시를 확인하고 편리하게 예약하세요.">
-    <link rel="stylesheet" href="style.css">
-    <link
-        href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Noto+Sans+KR:wght@300;400;500;600;700&display=swap"
-        rel="stylesheet">
-    <style>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>전시예약 | 밀양 널갤러리 NULL GALLERY</title><link href="/favicon.png" rel="icon" type="image/png"/><link href="/favicon.png" rel="apple-touch-icon"/>
+<link href="https://nullgallery.kr/reservation.html" rel="canonical"/>
+<meta content="밀양 널갤러리(NULL GALLERY) 전시 예약 페이지. 현재 진행 중인 전시를 확인하고 편리하게 예약하세요." name="description"/>
+<link href="style.css" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&amp;family=Noto+Sans+KR:wght@300;400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<style>
         .res-container {
             max-width: 1200px;
             margin: 0 auto;
@@ -140,8 +138,8 @@
             }
         }
     </style>
-    <meta property="og:url" content="https://nullgallery.kr/reservation.html">
-    <script type="application/ld+json">
+<meta content="https://nullgallery.kr/reservation.html" property="og:url"/>
+<script type="application/ld+json">
     {
       "@context": "https://schema.org",
       "@type": ["ArtGallery", "TouristAttraction", "Landmark"],
@@ -176,114 +174,105 @@
     }
     </script>
 </head>
-
 <body class="page-inner">
-    <header class="header header--dark" id="header">
-        <div class="header-logo"><a href="index.html">NULL</a></div>
-        <nav class="header-nav">
-            <ul>
-                <li><a href="exhibition.html">전시</a></li>
-                <li><a href="visit.html">방문안내</a></li>
-                <li><a href="reviews.html">방문후기</a></li>
-                <li><a href="reservation.html" class="active">예약</a></li>
-            </ul>
-        </nav>
-        <div class="header-util">
-            <span>KOR</span>
-            <button class="menu-btn" id="menuBtn"><span></span><span></span></button>
-        </div>
-    </header>
-
-    <div class="menu-overlay" id="menuOverlay">
-        <button class="menu-close" id="menuClose">✕</button>
-        <nav class="overlay-nav">
-            <ul>
-                <li><a href="exhibition.html" class="overlay-link">전시 <span>Exhibition</span></a></li>
-                <li><a href="visit.html" class="overlay-link">방문안내 <span>Visit</span></a></li>
-                <li><a href="reviews.html" class="overlay-link">방문후기 <span>Reviews</span></a></li>
-                <li><a href="reservation.html" class="overlay-link">예약 <span>Reservation</span></a></li>
-            </ul>
-        </nav>
-    </div>
-
-    <div class="page-hero">
-        <div class="page-hero-inner">
-            <h1>전시예약 <em>Reservation</em></h1>
-        </div>
-    </div>
-
-    <main class="res-container">
-        <section class="res-select-area">
-            <h2>SELECT EXHIBITION</h2>
-            <ul class="res-list" id="res-exhibition-list">
-                <!-- Loaded from CSV -->
-            </ul>
-
-            <div class="res-summary">
-                <div class="res-price-info">
-                    <span>성인 일반</span>
-                    <span>10,000원</span>
-                </div>
-                <div class="res-price-info">
-                    <span>초/중/고 학생</span>
-                    <span>5,000원</span>
-                </div>
-            </div>
-        </section>
-
-        <section class="calendar-area">
-            <div class="calendar-header">
-                <h3 id="cal-month-year">2026.06</h3>
-            </div>
-            <div class="calendar-grid">
-                <div class="cal-weekday">SUN</div>
-                <div class="cal-weekday">MON</div>
-                <div class="cal-weekday">TUE</div>
-                <div class="cal-weekday">WED</div>
-                <div class="cal-weekday">THU</div>
-                <div class="cal-weekday">FRI</div>
-                <div class="cal-weekday">SAT</div>
-                <!-- Days will be generated -->
-            </div>
-            <button class="res-btn" id="reserveBtn">예약하기 (RESERVE)</button>
-        </section>
-    </main>
-
-        
-    <!-- SEO Keywords (Hidden) -->
-    <div class="visually-hidden">
-        <h2>밀양 건축물, 벤타블랙 건물, 밀양 사진스팟, 밀양 필수코스, 밀양 이색체험, 벤타블랙 건축, 밀양 핫플</h2>
-        <p>널갤러리는 밀양의 가장 독특한 외관을 가진 건축물입니다. 
+<header class="header header--dark" id="header">
+<div class="header-logo"><a href="index.html">NULL</a></div>
+<nav class="header-nav">
+<ul>
+<li><a href="exhibition.html">전시</a></li>
+<li><a href="visit.html">방문안내</a></li>
+<li><a href="reviews.html">방문후기</a></li>
+<li><a class="active" href="reservation.html">예약</a></li>
+</ul>
+</nav>
+<div class="header-util">
+<span>KOR</span>
+<button class="menu-btn" id="menuBtn"><span></span><span></span></button>
+</div>
+</header>
+<div class="menu-overlay" id="menuOverlay">
+<button class="menu-close" id="menuClose">✕</button>
+<nav class="overlay-nav">
+<ul>
+<li><a class="overlay-link" href="exhibition.html">전시 <span>Exhibition</span></a></li>
+<li><a class="overlay-link" href="visit.html">방문안내 <span>Visit</span></a></li>
+<li><a class="overlay-link" href="reviews.html">방문후기 <span>Reviews</span></a></li>
+<li><a class="overlay-link" href="reservation.html">예약 <span>Reservation</span></a></li>
+</ul>
+</nav>
+</div>
+<div class="page-hero">
+<div class="page-hero-inner">
+<h1>전시예약 <em>Reservation</em></h1>
+</div>
+</div>
+<main class="res-container">
+<section class="res-select-area">
+<h2>SELECT EXHIBITION</h2>
+<ul class="res-list" id="res-exhibition-list">
+<!-- Loaded from CSV -->
+</ul>
+<div class="res-summary">
+<div class="res-price-info">
+<span>성인 일반</span>
+<span>10,000원</span>
+</div>
+<div class="res-price-info">
+<span>초/중/고 학생</span>
+<span>5,000원</span>
+</div>
+</div>
+</section>
+<section class="calendar-area">
+<div class="calendar-header">
+<h3 id="cal-month-year">2026.06</h3>
+</div>
+<div class="calendar-grid">
+<div class="cal-weekday">SUN</div>
+<div class="cal-weekday">MON</div>
+<div class="cal-weekday">TUE</div>
+<div class="cal-weekday">WED</div>
+<div class="cal-weekday">THU</div>
+<div class="cal-weekday">FRI</div>
+<div class="cal-weekday">SAT</div>
+<!-- Days will be generated -->
+</div>
+<button class="res-btn" id="reserveBtn">예약하기 (RESERVE)</button>
+</section>
+</main>
+<!-- SEO Keywords (Hidden) -->
+<div class="visually-hidden">
+<h2>밀양 건축물, 벤타블랙 건물, 밀양 사진스팟, 밀양 필수코스, 밀양 이색체험, 벤타블랙 건축, 밀양 핫플</h2>
+<p>널갤러리는 밀양의 가장 독특한 외관을 가진 건축물입니다. 
     외벽이 빛을 99.9% 흡수하는 벤타블랙으로 칠해져 있어, 마치 세상에 구멍이 뚫린 듯한 웅장한 착시를 일으킵니다. 
     이 독보적인 미니멀리즘 외관은 SNS에서 빠르게 바이럴되며 밀양 최고의 사진스팟이자 밀양 여행의 필수 코스가 되었습니다.</p>
-        <p>경상도 가볼만한곳 및 경남 전시 추천 장소로서 널갤러리는 밀양 필수 여행 코스로 자리잡았습니다.</p>
-    </div>
+<p>경상도 가볼만한곳 및 경남 전시 추천 장소로서 널갤러리는 밀양 필수 여행 코스로 자리잡았습니다.</p>
+</div>
 <footer class="footer">
-        <div class="footer-inner">
-            <div class="footer-brand">NULL GALLERY</div>
-            <div class="footer-cols">
-                <div class="footer-col">
-                    <p class="footer-col-title">주소</p>
-                    <p>경상남도 밀양시 교동 692-2</p>
-                </div>
-                <div class="footer-col">
-                    <p class="footer-col-title">운영시간</p>
-                    <p>화 – 일 10:00 – 18:00</p>
-                    <p class="footer-muted">월요일 휴관</p>
-                </div>
-                <div class="footer-col">
-                    <p class="footer-col-title">문의</p>
-                    <p><a href="mailto:nullgalllery2026@gmail.com">nullgalllery2026@gmail.com</a></p>
-                </div>
-            </div>
-            <div class="footer-bottom">
-                <p>© 2026 NULL GALLERY. All Rights Reserved.</p>
-            </div>
-        </div>
-    </footer>
-
-    <script src="script.js"></script>
-    <script>
+<div class="footer-inner">
+<div class="footer-brand">NULL GALLERY</div>
+<div class="footer-cols">
+<div class="footer-col">
+<p class="footer-col-title">주소</p>
+<p>경상남도 밀양시 교동 692-2</p>
+</div>
+<div class="footer-col">
+<p class="footer-col-title">운영시간</p>
+<p>화 – 일 10:00 – 18:00</p>
+<p class="footer-muted">월요일 휴관</p>
+</div>
+<div class="footer-col">
+<p class="footer-col-title">문의</p>
+<p><a href="mailto:nullgalllery2026@gmail.com">nullgalllery2026@gmail.com</a></p>
+</div>
+</div>
+<div class="footer-bottom">
+<p>© 2026 NULL GALLERY. All Rights Reserved.</p>
+</div>
+</div>
+</footer>
+<script src="script.js"></script>
+<script>
         // Reservation Page Specific Logic
         document.addEventListener('DOMContentLoaded', () => {
             const resList = document.getElementById('res-exhibition-list');
@@ -404,5 +393,4 @@
         });
     </script>
 </body>
-
 </html>
