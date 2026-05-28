@@ -14,15 +14,31 @@ EXHIBITION_HTML = os.path.join(BASE_DIR, "exhibition.html")
 review_images = []
 exhibition_images = []
 
+def generate_smart_title(comment):
+    comment_lower = comment.lower()
+    if "론 뮤익" in comment_lower or "mueck" in comment_lower:
+        return "널갤러리 론 뮤익 전시 후기"
+    elif "벤타블랙" in comment_lower or "vantablack" in comment_lower or "검은" in comment_lower:
+        return "널갤러리 벤타블랙 건축 후기"
+    elif "굴뚝" in comment_lower or "산업" in comment_lower:
+        return "널갤러리 100년 역사 굴뚝 재생 후기"
+    elif "데이트" in comment_lower or "가볼만한곳" in comment_lower or "핫플" in comment_lower:
+        return "밀양 데이트코스 널갤러리 방문 후기"
+    else:
+        return "널갤러리 전시 방문 후기"
+
 # 1. Read CSVs
 if os.path.exists(REVIEWS_CSV):
     with open(REVIEWS_CSV, "r", encoding="utf-8") as f:
         reader = csv.DictReader(f)
         for row in reader:
             if "image" in row and row["image"]:
+                comment = row.get("comment", "")
+                smart_title = generate_smart_title(comment)
                 review_images.append({
                     "src": f"images/reviews/{row['image']}",
-                    "alt": f"[밀양 가볼만한곳] 널갤러리 방문 후기 - {row['comment'][:30]}... (밀양 핫플 추천, 경남 전시회)"
+                    "alt": f"[밀양 가볼만한곳] 널갤러리 방문 후기 - {comment[:40]}... (밀양 핫플 추천, 경남 전시회)",
+                    "title": smart_title
                 })
 
 if os.path.exists(EXHIBITIONS_CSV):
@@ -30,16 +46,14 @@ if os.path.exists(EXHIBITIONS_CSV):
         reader = csv.DictReader(f)
         for row in reader:
             if "thumbnail" in row and row["thumbnail"]:
-                # Note: Exhibition images are usually in images/{folder}/{thumbnail}
                 folder = row.get("folder", "")
                 thumb = row["thumbnail"]
-                if folder:
-                    src = f"images/{thumb}" # In original html, they were stored in images/ directly or inside folder.
-                    # Looking at script.js or ron_mueck.html, ron_mueck_hero.png is in images/
-                    exhibition_images.append({
-                        "src": f"images/{thumb}",
-                        "alt": f"밀양 가볼만한곳 널갤러리 전시 - {row['title']}"
-                    })
+                title = row.get("title", "널갤러리 현대미술 전시")
+                exhibition_images.append({
+                    "src": f"images/{thumb}",
+                    "alt": f"밀양 가볼만한곳 널갤러리 전시 - {title}",
+                    "title": f"널갤러리 전시 - {title}"
+                })
 
 # 2. Update HTML files with <noscript>
 def inject_noscript_images(html_path, images):
@@ -58,7 +72,7 @@ def inject_noscript_images(html_path, images):
             
         noscript_tag = soup.new_tag("noscript", id="seo-images")
         for img in images:
-            img_tag = soup.new_tag("img", src=img["src"], alt=img["alt"])
+            img_tag = soup.new_tag("img", src=img["src"], alt=img["alt"], title=img["title"])
             noscript_tag.append(img_tag)
             
         hidden_div.append(noscript_tag)
@@ -102,6 +116,10 @@ def update_sitemap(sitemap_path, page_url, new_images):
             caption_tag = soup.new_tag("image:caption")
             caption_tag.string = img["alt"]
             image_tag.append(caption_tag)
+            
+            title_tag = soup.new_tag("image:title")
+            title_tag.string = img["title"]
+            image_tag.append(title_tag)
             
             target_url.append(image_tag)
             
